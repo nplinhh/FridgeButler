@@ -3,6 +3,22 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/A/Documents/GitHub/FridgeButler/FridgeButler/app/src/main/res/layout/activity_login.xml" value="0.2046875" />
+        <entry key="..\:/Users/A/Documents/GitHub/FridgeButler/FridgeButler/app/src/main/res/layout/activity_main.xml" value="0.2046875" />
+        <entry key="..\:/Users/A/Documents/GitHub/FridgeButler/FridgeButler/app/src/main/res/layout/activity_register.xml" value="0.2046875" />
+        <entry key="..\:/Users/A/Documents/GitHub/FridgeButler/FridgeButler/app/src/main/res/layout/activity_show_profile.xml" value="0.2046875" />
+        <entry key="..\:/Users/A/Documents/GitHub/FridgeButler/FridgeButler/app/src/main/res/layout/add_food.xml" value="0.2046875" />
+        <entry key="..\:/Users/A/Documents/GitHub/FridgeButler/FridgeButler/app/src/main/res/layout/bottom.xml" value="0.2046875" />
+        <entry key="..\:/Users/A/Documents/GitHub/FridgeButler/FridgeButler/app/src/main/res/layout/foodlist.xml" value="0.2046875" />
+        <entry key="..\:/Users/A/Documents/GitHub/FridgeButler/FridgeButler/app/src/main/res/layout/recipe_detail.xml" value="0.2046875" />
+        <entry key="..\:/Users/A/Documents/GitHub/FridgeButler/FridgeButler/app/src/main/res/layout/recipelist.xml" value="0.1" />
+        <entry key="..\:/Users/A/Documents/GitHub/FridgeButler/FridgeButler/app/src/main/res/layout/shoppinglist.xml" value="0.2046875" />
+        <entry key="..\:/Users/A/Documents/GitHub/FridgeButler/FridgeButler/app/src/main/res/layout/tab1.xml" value="0.1" />
+        <entry key="..\:/Users/A/Documents/GitHub/FridgeButler/FridgeButler/app/src/main/res/layout/tab2.xml" value="0.1" />
+        <entry key="..\:/Users/A/Documents/GitHub/FridgeButler/FridgeButler/app/src/main/res/layout/tab3.xml" value="0.1" />
+        <entry key="..\:/Users/A/Documents/GitHub/FridgeButler/FridgeButler/app/src/main/res/layout/tab4.xml" value="0.1" />
+        <entry key="..\:/Users/A/Documents/GitHub/FridgeButler/FridgeButler/app/src/main/res/layout/top.xml" value="0.1" />
+        <entry key="..\:/Users/A/Documents/GitHub/FridgeButler/FridgeButler/app/src/main/res/layout/update_food.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_show_profile.xml" value="0.24365942028985507" />
       </map>
     </option>
