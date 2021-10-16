@@ -4,10 +4,6 @@
         "source": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\src\\main\\res\\layout\\activity_register.xml"
     },
     {
-        "merged": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\build\\intermediates\\merged_res\\debug\\drawable_bingxiangcaise.png.flat",
-        "source": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\src\\main\\res\\drawable\\bingxiangcaise.png"
-    },
-    {
         "merged": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\build\\intermediates\\merged_res\\debug\\font_basic.xml.flat",
         "source": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\src\\main\\res\\font\\basic.xml"
     },
@@ -108,12 +104,12 @@
         "source": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\src\\main\\res\\menu\\nav_menu.xml"
     },
     {
-        "merged": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_lock_24.xml.flat",
-        "source": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\src\\main\\res\\drawable\\ic_baseline_lock_24.xml"
-    },
-    {
         "merged": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_lock_24.xml.flat",
+        "source": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\src\\main\\res\\drawable\\ic_baseline_lock_24.xml"
     },
     {
         "merged": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\build\\intermediates\\merged_res\\debug\\font_indie_flower.xml.flat",
