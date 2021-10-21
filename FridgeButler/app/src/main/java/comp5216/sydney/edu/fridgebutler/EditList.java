@@ -50,7 +50,18 @@ public class EditList extends AppCompatActivity {
         int day = datepicker.getDayOfMonth();
         int month = datepicker.getMonth();
         int year =  datepicker.getYear();
-        String expiry = day + "/" + month + "/" + year;
+        //String expiry = day + "/" + month + "/" + year;
+
+        // Calculate remaining days
+        Calendar userDeadline = Calendar.getInstance();
+        userDeadline.set(year,month,day);
+        Long diff = userDeadline.getTimeInMillis() - System.currentTimeMillis();
+        int days = (int)(diff / 86400000); diff -= days * 86400000;
+        String expiry = String.format("%d days left", days);
+
+        if (userDeadline.getTimeInMillis() - System.currentTimeMillis() <= 0) {
+            expiry = "OVERDUE";
+        }
 
         Map<String, Object> itemsList = new HashMap<>();
         itemsList.put("expiryDate", expiry);

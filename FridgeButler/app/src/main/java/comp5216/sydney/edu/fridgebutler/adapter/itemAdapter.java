@@ -1,5 +1,6 @@
 package comp5216.sydney.edu.fridgebutler.adapter;
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,6 +36,12 @@ public class itemAdapter extends ArrayAdapter < Item >  {
 
         TextView textView2 = currentItemView.findViewById(R.id.textView2);
         textView2.setText(currentPosition.getTime());
+        if (currentPosition.getTime().equals("OVERDUE")) {
+            textView2.setTextColor(Color.RED);
+        }
+        if (currentPosition.getTime().charAt(0) == '1') {
+            textView2.setTextColor(Color.BLUE);
+        }
 
         return currentItemView;
     }

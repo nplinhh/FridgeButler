@@ -54,6 +54,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     itemAdapter adapter;
     ListView listView;
 
+    ArrayList <Item> expiredFood;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -81,6 +83,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         navigationView.setNavigationItemSelectedListener(this);
 
         itemList = new ArrayList <Item> ();
+        expiredFood = new ArrayList<>();
         adapter = new itemAdapter(this, itemList);
 
 
@@ -183,11 +186,93 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         itemList.add(item);
                     }
                     dataCallBack.onComplete(itemList);
+                    checkExpiry();
+
                 } else {
                     Log.d(TAG, "Error getting documents: ", task.getException());
                 }
             }
         });
+    }
+
+    // Check status of added food, suggest options for expired food
+    public void checkExpiry() {
+        int flag = 0; // flag to signal if there is food that will expire in 1 day
+        for (int i=0; i < itemList.size(); i++) {
+            Log.i("Food time: ", itemList.get(i).getTime());
+            if (itemList.get(i).getTime().equals("OVERDUE")) {
+                if (!expiredFood.contains(itemList.get(i))) {
+                    expiredFood.add(itemList.get(i));
+                }
+            }
+
+            if (flag == 0) {
+                if (itemList.get(i).getTime().charAt(0) == '1') {
+                    // If the food will expire in 1 day, suggest the user to get recipe
+                    flag = 1;
+                }
+            }
+        }
+
+
+        // Ask user if want to remove all the expired food
+        if (expiredFood.size() != 0) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+            builder.setTitle("Expired food detected")
+                    .setMessage("Do you want to remove all the expired food?")
+                    .setPositiveButton("Cancel", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialogInterface, int i) {
+
+                        }
+                    })
+                    .setNegativeButton("Yes", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            for (int a = 0; a < expiredFood.size(); a++) {
+                                String docRef = expiredFood.get(a).getDocRef();
+                                DocumentReference docToDelete = db.collection("ingredients").document(user_id).collection("IngredientList").document(docRef);
+                                docToDelete.delete().addOnSuccessListener(new OnSuccessListener<Void>() {
+                                    @Override
+                                    public void onSuccess(Void unused) {
+                                        Log.d(TAG, "DocumentSnapshot successfully deleted!");
+                                    }
+                                })
+                                        .addOnFailureListener(new OnFailureListener() {
+                                            @Override
+                                            public void onFailure(@NonNull Exception e) {
+                                                Log.w(TAG, "Error deleting document", e);
+                                            }
+                                        });
+                            }
+
+                            itemList.removeAll(expiredFood);
+                            expiredFood.clear();
+                            adapter.notifyDataSetChanged();
+                        }
+                    });
+
+            builder.create().show();
+        }
+
+        // Ask user to handle food which will expire in 1 day
+        if (flag == 1) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+            builder.setTitle("Note: food will expire in 1 day")
+                    .setMessage("There are food that will expire in 1 day, do you want to check recipe?")
+                    .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            // Navigate to recipe
+                            startActivity(new Intent(getApplicationContext(), RecommendRecipe.class));
+                        }
+                    })
+                    .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            // User cancelled the dialog
+                            // Nothing happens
+                        }
+                    });
+
+            builder.create().show();
+        }
     }
 
 
