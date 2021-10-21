@@ -30,6 +30,8 @@ public class EditList extends AppCompatActivity {
     String user_id;
     FirebaseFirestore db;
     FirebaseAuth firebaseAuth;
+    String documentID;
+    String remainingDays;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,17 +52,17 @@ public class EditList extends AppCompatActivity {
         int day = datepicker.getDayOfMonth();
         int month = datepicker.getMonth();
         int year =  datepicker.getYear();
-        //String expiry = day + "/" + month + "/" + year;
+        String expiry = day + "/" + month + "/" + year;
 
         // Calculate remaining days
         Calendar userDeadline = Calendar.getInstance();
         userDeadline.set(year,month,day);
         Long diff = userDeadline.getTimeInMillis() - System.currentTimeMillis();
         int days = (int)(diff / 86400000); diff -= days * 86400000;
-        String expiry = String.format("%d days left", days);
+        remainingDays = String.format("%d days left", days);
 
         if (userDeadline.getTimeInMillis() - System.currentTimeMillis() <= 0) {
-            expiry = "OVERDUE";
+            remainingDays = "OVERDUE";
         }
 
         Map<String, Object> itemsList = new HashMap<>();
@@ -74,6 +76,18 @@ public class EditList extends AppCompatActivity {
                     @Override
                     public void onSuccess(DocumentReference documentReference) {
                         Log.d(TAG, "Add new Item: " + documentReference.getId());
+                        documentID = documentReference.getId();
+                        // Prepare data intent for sending it back
+                        Intent data = new Intent();
+
+                        // Pass relevant data back as a result
+                        data.putExtra("ItemName", itemName);
+                        data.putExtra("ItemTime", remainingDays);
+                        data.putExtra("DocID", documentID);
+
+                        // Activity finishes OK, return the data
+                        setResult(RESULT_OK, data);
+                        finish();
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {
@@ -82,7 +96,7 @@ public class EditList extends AppCompatActivity {
                         Log.w(TAG, "Error adding document", e);
                     }
                 });
-        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+
     }
 
 

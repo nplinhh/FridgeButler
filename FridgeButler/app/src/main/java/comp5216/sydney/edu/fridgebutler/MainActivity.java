@@ -2,6 +2,7 @@ package comp5216.sydney.edu.fridgebutler;
 
 import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -34,6 +35,8 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Calendar;
 
 import comp5216.sydney.edu.fridgebutler.Map.MapsActivity;
 import comp5216.sydney.edu.fridgebutler.adapter.DataCallBack;
@@ -42,6 +45,8 @@ import comp5216.sydney.edu.fridgebutler.adapter.itemAdapter;
 import comp5216.sydney.edu.fridgebutler.recipe.RecommendRecipe;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+    int REQUEST_OPEN_EDITLIST = 101;
+
     public DrawerLayout drawerLayout;
     public ActionBarDrawerToggle actionBarDrawerToggle;
     public NavigationView navigationView;
@@ -162,7 +167,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             startActivity(new Intent(getApplicationContext(), Setting.class));
         }
         else if(id == R.id.listItem){
-            startActivity(new Intent(getApplicationContext(), EditList.class));
+            //startActivity(new Intent(getApplicationContext(), EditList.class));
+            Intent intent = new Intent(MainActivity.this, EditList.class);
+            startActivityForResult(intent, REQUEST_OPEN_EDITLIST);
         }
         else if(id == R.id.nav_map){
             startActivity(new Intent(getApplicationContext(), MapsActivity.class));
@@ -170,11 +177,26 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         else if(id == R.id.nav_recipe){
             startActivity(new Intent(getApplicationContext(), RecommendRecipe.class));
         }
-
+        drawerLayout.closeDrawers();
         return true;
     }
 
-    
+    @SuppressLint("MissingSuperCall")
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == REQUEST_OPEN_EDITLIST) {
+            if (resultCode == RESULT_OK) {
+                String editItemName = data.getExtras().getString("ItemName");
+                String editItemTime = data.getExtras().getString("ItemTime");
+                String editDocID = data.getExtras().getString("DocID");
+                Item item = new Item(editItemName, editItemTime, editDocID);
+                itemList.add(item);
+                adapter.notifyDataSetChanged();
+            }
+        }
+    }
+
+   /** Load food list from cloud storage, only execute once */
    public void loadData(DataCallBack dataCallBack){
         CollectionReference collectionRef = db.collection("ingredients").document(user_id).collection("IngredientList");
         collectionRef.get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
@@ -182,7 +204,30 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 if (task.isSuccessful()) {
                     for (QueryDocumentSnapshot document : task.getResult()) {
-                        Item item= new Item(document.get("Name").toString(), document.get("expiryDate").toString(), document.getId());
+                        // Convert deadline string to int array
+                        String deadline = document.get("expiryDate").toString();
+                        int[] dateArray = Arrays.stream(deadline.split("/"))
+                                .mapToInt(Integer::parseInt)
+                                .toArray();
+
+                        // Calculate remaining days
+                        int day = dateArray[0];
+                        int month = dateArray[1];
+                        int year =  dateArray[2];
+
+                        // Calculate remaining days
+                        Calendar userDeadline = Calendar.getInstance();
+                        userDeadline.set(year,month,day);
+                        Long diff = userDeadline.getTimeInMillis() - System.currentTimeMillis();
+                        int days = (int)(diff / 86400000); diff -= days * 86400000;
+                        String remainingDays = String.format("%d days left", days);
+
+                        if (userDeadline.getTimeInMillis() - System.currentTimeMillis() <= 0) {
+                            remainingDays = "OVERDUE";
+                        }
+
+                        //Item item= new Item(document.get("Name").toString(), document.get("expiryDate").toString(), document.getId());
+                        Item item= new Item(document.get("Name").toString(), remainingDays, document.getId());
                         itemList.add(item);
                     }
                     dataCallBack.onComplete(itemList);
@@ -199,7 +244,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public void checkExpiry() {
         int flag = 0; // flag to signal if there is food that will expire in 1 day
         for (int i=0; i < itemList.size(); i++) {
-            Log.i("Food time: ", itemList.get(i).getTime());
             if (itemList.get(i).getTime().equals("OVERDUE")) {
                 if (!expiredFood.contains(itemList.get(i))) {
                     expiredFood.add(itemList.get(i));
