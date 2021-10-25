@@ -1,4 +1,4 @@
-package comp5216.sydney.edu.fridgebutler.recipe;
+package comp5216.sydney.edu.fridgebutler.Recipe;
 
 
 import java.util.List;

@@ -1,14 +1,10 @@
-package comp5216.sydney.edu.fridgebutler.recipe;
+package comp5216.sydney.edu.fridgebutler.Recipe;
 
 
 
-
-import android.os.Build;
 
 import java.io.Serializable;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 
@@ -26,7 +22,6 @@ public class Ingredient implements Serializable {
     private String unit;
 
     public Ingredient() {
-        // Default constructor required for Firebase
     }
 
     public Ingredient(String IngredientName, String category, Date expDate) {
