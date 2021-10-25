@@ -6,7 +6,7 @@
     android:background="@color/mywhite"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Login">
+    tools:context=".Setting$Login">
 
     <TextView
         android:id="@+id/appName"
