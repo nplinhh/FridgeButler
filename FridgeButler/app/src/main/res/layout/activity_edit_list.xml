@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EditList">
+    tools:context=".AddItem">
 
     <EditText
         android:id="@+id/editItem"
@@ -33,11 +33,10 @@
         app:layout_constraintVertical_bias="0.269" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/saveItem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add Item"
-        android:onClick="addItemOnclick"
+        android:text="Save"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -64,6 +63,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/saveItem" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

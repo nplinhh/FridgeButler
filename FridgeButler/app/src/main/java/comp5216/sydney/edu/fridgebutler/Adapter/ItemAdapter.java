@@ -1,4 +1,4 @@
-package comp5216.sydney.edu.fridgebutler.adapter;
+package comp5216.sydney.edu.fridgebutler.Adapter;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,9 +12,9 @@ import java.util.ArrayList;
 
 import comp5216.sydney.edu.fridgebutler.R;
 
-public class itemAdapter extends ArrayAdapter < Item >  {
+public class ItemAdapter extends ArrayAdapter < Item >  {
     ArrayList<Item> listItem;
-    public itemAdapter(@NonNull Context context, ArrayList<Item> arrayList) {
+    public ItemAdapter(@NonNull Context context, ArrayList<Item> arrayList) {
         super(context, 0, arrayList);
         listItem = arrayList;
     }
@@ -34,7 +34,7 @@ public class itemAdapter extends ArrayAdapter < Item >  {
         textView1.setText(currentPosition.getName());
 
         TextView textView2 = currentItemView.findViewById(R.id.textView2);
-        textView2.setText(currentPosition.getTime());
+        textView2.setText(currentPosition.getExpiryDate());
 
         return currentItemView;
     }

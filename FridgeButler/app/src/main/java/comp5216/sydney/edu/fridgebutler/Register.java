@@ -9,7 +9,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,18 +23,17 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
-
 import java.util.HashMap;
 import java.util.Map;
 
 
 public class Register extends AppCompatActivity {
-    EditText nameInput, passwordInput, emailInput, phoneInput;
+    String TAG = this.getClass().getSimpleName();
+    EditText nameInput, passwordInput, emailInput, phoneInput, addressInput;
     Button registerButton;
     TextView logIn;
     FirebaseAuth firebaseAuth;
     FirebaseFirestore db;
-    ProgressBar progressBar;
     String user_id;
 
     @Override
@@ -49,7 +47,8 @@ public class Register extends AppCompatActivity {
         phoneInput = findViewById(R.id.phoneNumber);
         registerButton = findViewById(R.id.Register);
         logIn = findViewById(R.id.login);
-        progressBar = findViewById(R.id.progressBar);
+        addressInput = findViewById(R.id.Address);
+
 
         firebaseAuth = FirebaseAuth.getInstance();
         db = FirebaseFirestore.getInstance();
@@ -60,6 +59,7 @@ public class Register extends AppCompatActivity {
         String phone = phoneInput.getText().toString();
         String email = emailInput.getText().toString().trim();
         String password = passwordInput.getText().toString().trim();
+        String address = addressInput.getText().toString().trim();
 
         if(TextUtils.isEmpty(username)){
             nameInput.setError("Please enter your full name");
@@ -76,12 +76,15 @@ public class Register extends AppCompatActivity {
             phoneInput.setError("Please enter your phone number");
             return;
         }
+        if(TextUtils.isEmpty(address)){
+            addressInput.setError("Please enter your address");
+            return;
+        }
         if(password.length() < 6){
             passwordInput.setError("Password must have at least 6 characters.");
             return;
         }
 
-        progressBar.setVisibility(View.VISIBLE);
 
         firebaseAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
@@ -90,34 +93,39 @@ public class Register extends AppCompatActivity {
                 user.put("FullName", username);
                 user.put("Email", email);
                 user.put("Phone", phone);
-                user_id = firebaseAuth.getCurrentUser().getUid();
-                DocumentReference documentReference = db.collection("users").document(user_id);
-                documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void aVoid) {
-                        Log.d(TAG, "onSuccess: user Profile is created for "+ user_id);
-                    }
-                }).addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Log.d(TAG, "onFailure: " + e.toString());
-                    }
-                });
+                user.put("Address", address);
 
                 if(task.isSuccessful()){
                     Toast.makeText(Register.this, "User Created", Toast.LENGTH_SHORT).show();
+                    Log.d(TAG, " User Registered");
+                    user_id = firebaseAuth.getCurrentUser().getUid();
+                    DocumentReference documentReference = db.collection("users").document(user_id);
+                    documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void aVoid) {
+                            Log.d(TAG, "onSuccess: user Profile is created for "+ user_id);
+                        }
+                    }).addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            Log.d(TAG, "onFailure: " + e.toString());
+                            Toast.makeText(Register.this, "Error" + task.getException().getMessage(),Toast.LENGTH_SHORT).show();
+                        }
+                    });
                     startActivity(new Intent(getApplicationContext(), MainActivity.class));
                 }
                 else{
-                    Toast.makeText(Register.this, "Error" + task.getException().getMessage(),Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Register.this, "Error! " + task.getException().getMessage(),Toast.LENGTH_SHORT).show();
+                    Log.d(TAG, "Cannot register");
                 }
             }
         });
     }
 
-
     public void setLogIn(View view){
         startActivity(new Intent(getApplicationContext(), Login.class));
     }
+
+
 
 }

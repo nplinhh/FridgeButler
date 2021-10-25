@@ -1,26 +1,20 @@
-package comp5216.sydney.edu.fridgebutler.Recipe;
+package comp5216.sydney.edu.fridgebutler.Recipe.Model;
 
 import java.util.List;
 import java.util.Objects;
 
 public class Recipe {
-    boolean vegetarian;
     String id;
     String title;
-    int readyInMinutes;
     String image;
     String instructions;
     List<Ingredient> extendedIngredients;
     List<Instruction> analyzedInstructions;
 
-    public boolean isVegetarian() {
-        return vegetarian;
+    public Recipe(String id, String image){
+        this.id = id;
+        this.image = image;
     }
-
-    public void setVegetarian(boolean vegetarian) {
-        this.vegetarian = vegetarian;
-    }
-
     public String getId() {
         return id;
     }
@@ -35,14 +29,6 @@ public class Recipe {
 
     public void setTitle(String title) {
         this.title = title;
-    }
-
-    public int getReadyInMinutes() {
-        return readyInMinutes;
-    }
-
-    public void setReadyInMinutes(int readyInMinutes) {
-        this.readyInMinutes = readyInMinutes;
     }
 
     public String getImage() {

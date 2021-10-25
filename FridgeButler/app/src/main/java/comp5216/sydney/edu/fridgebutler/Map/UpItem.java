@@ -1,47 +1,46 @@
-package comp5216.sydney.edu.fridgebutler;
-
-import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
+package comp5216.sydney.edu.fridgebutler.Map;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
-import android.location.Address;
-import android.location.Geocoder;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
-import comp5216.sydney.edu.fridgebutler.Map.MapsActivity;
+import comp5216.sydney.edu.fridgebutler.MainActivity;
+import comp5216.sydney.edu.fridgebutler.R;
+import comp5216.sydney.edu.fridgebutler.ShoppingList.ShoppingList;
 
 public class UpItem extends AppCompatActivity {
     String TAG = this.getClass().getSimpleName();
-    EditText address, phone;
-    ArrayList<String> itemList;
+    EditText address, phone, message;
     Button save;
+    Button delete;
 
     String user_id;
     FirebaseFirestore db;
     FirebaseAuth firebaseAuth;
+    String shoppingList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,20 +50,17 @@ public class UpItem extends AppCompatActivity {
         address = findViewById(R.id.unit);
         phone = findViewById(R.id.Phone);
         save = findViewById(R.id.Upload);
+        message = findViewById(R.id.Message);
+        delete = findViewById(R.id.deleteRequest);
+
+        Bundle extras = getIntent().getExtras();
+        if(extras != null){
+            shoppingList = extras.getString("shoppingList");
+        }
 
         db = FirebaseFirestore.getInstance();
         firebaseAuth = FirebaseAuth.getInstance();
         user_id = firebaseAuth.getCurrentUser().getUid();
-
-
-
-        Bundle extras = getIntent().getExtras();
-        itemList = new ArrayList<>();
-        if(extras != null){
-            itemList = extras.getStringArrayList("itemToUpload");
-        }
-
-
 
         save.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,59 +69,51 @@ public class UpItem extends AppCompatActivity {
             }
         });
 
+        delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(UpItem.this);
+                builder.setTitle("Do you want to delete your current request?" )
+                        .setPositiveButton("Cancel", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialogInterface, int i) {
+
+                            }
+                        })
+                        .setNegativeButton("Yes", new DialogInterface.OnClickListener() {
+                            @RequiresApi(api = Build.VERSION_CODES.O)
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                DocumentReference docRef = db.collection("service").document(user_id);
+                                docRef.delete();
+                                startActivity(new Intent(UpItem.this, MainActivity.class));
+                            }
+                        });
+
+                builder.create().show();
+            }
+        });
     }
 
 
     public void addItemOnclick(){
         String addressString = address.getText().toString().trim();
         String phoneNumber = phone.getText().toString().trim();
+        String messageType = message.getText().toString().trim();
         Map<String, Object> info = new HashMap<>();
         info.put("Address", addressString);
-        info.put("Food", itemList);
         info.put("Phone", phoneNumber);
 
-        DocumentReference docRef = db.collection("donate").document(user_id);
-        docRef.set(info).addOnSuccessListener(new OnSuccessListener<Void>() {
-            @Override
-            public void onSuccess(Void aVoid) {
-                Log.d(TAG, "onSuccess: address is created "+ user_id);
-                Intent intent = new Intent(UpItem.this, MapsActivity.class);
-                startActivity(intent);
-            }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                Log.d(TAG, "onFailure: " + e.toString());
-                Toast.makeText(UpItem.this, "Error. Please try again later.", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(UpItem.this, MainActivity.class));
-            }
-        });
+        if(shoppingList!= null){
+            info.put("Message", shoppingList);
+            info.put("Type", "autoGenerated");
+        }
+        else{
+            info.put("Message", messageType);
+            info.put("Type", "General");
+        }
 
+
+        DocumentReference docRef = db.collection("service").document(user_id);
+        docRef.set(info);
+        startActivity(new Intent(UpItem.this, MainActivity.class));
     }
-
-//    public void addItemOnclick(){
-//        String addressString = address.getText().toString().trim();
-//        String phoneNumber = phone.getText().toString().trim();
-//        Map<String, Object> address = new HashMap<>();
-//        info.put("Address", addressString);
-//        info.put("Food", itemList);
-//        info.put("Phone", phoneNumber);
-//
-//        DocumentReference docRef = db.collection("donate").document(user_id);
-//        docRef.set(info).addOnSuccessListener(new OnSuccessListener<Void>() {
-//            @Override
-//            public void onSuccess(Void aVoid) {
-//                Log.d(TAG, "onSuccess: address is created "+ user_id);
-//                Intent intent = new Intent(UpItem.this, MapsActivity.class);
-//                startActivity(intent);
-//            }
-//        }).addOnFailureListener(new OnFailureListener() {
-//            @Override
-//            public void onFailure(@NonNull Exception e) {
-//                Log.d(TAG, "onFailure: " + e.toString());
-//                Toast.makeText(UpItem.this, "Error. Please try again later.", Toast.LENGTH_SHORT).show();
-//                startActivity(new Intent(UpItem.this, MainActivity.class));
-//            }
-//        });
-//    }
 }

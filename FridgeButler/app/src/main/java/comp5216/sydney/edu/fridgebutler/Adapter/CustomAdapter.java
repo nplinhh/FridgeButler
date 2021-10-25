@@ -3,44 +3,73 @@ package comp5216.sydney.edu.fridgebutler.Adapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.List;
+
 import comp5216.sydney.edu.fridgebutler.R;
-import comp5216.sydney.edu.fridgebutler.Recipe.Model.RecyclerViewModel;
 
-public class RecyclerViewAdapter extends RecyclerView.Adapter{
+public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder> {
 
-    @NonNull
-    @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        final View view = LayoutInflater.from(parent.getContext()).inflate(viewType, parent, false);
-        return new ViewHolder();
+    private List<String> localDataSet;
+
+
+    /**
+     * Provide a reference to the type of views that you are using
+     * (custom ViewHolder).
+     */
+
+
+    public static class ViewHolder extends RecyclerView.ViewHolder  {
+        private final TextView textView;
+
+        public ViewHolder(View view) {
+            super(view);
+            // Define click listener for the ViewHolder's View
+            textView = (TextView) view.findViewById(R.id.textView);
+        }
+
+        public TextView getTextView() {
+            return textView;
+        }
+
     }
 
-    @Override
-    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-        ViewHolder viewHolder = (ViewHolder) holder.bindData()
-
-
+    /**
+     * Initialize the dataset of the Adapter.
+     *
+     * @param dataSet String[] containing the data to populate views to be used
+     * by RecyclerView.
+     */
+    public CustomAdapter(List<String> dataSet) {
+        localDataSet = dataSet;
     }
 
+    // Create new views (invoked by the layout manager)
+    @Override
+    public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
+        // Create a new view, which defines the UI of the list item
+        View view = LayoutInflater.from(viewGroup.getContext())
+                .inflate(R.layout.text_row_item, viewGroup, false);
+
+        return new ViewHolder(view);
+    }
+
+    // Replace the contents of a view (invoked by the layout manager)
+    @Override
+    public void onBindViewHolder(ViewHolder viewHolder, final int position) {
+
+        // Get element from your dataset at this position and replace the
+        // contents of the view with that element
+        viewHolder.getTextView().setText(localDataSet.get(position));
+    }
+
+    // Return the size of your dataset (invoked by the layout manager)
     @Override
     public int getItemCount() {
-        return models.size();
-    }
-
-    public static class ViewHolder extends RecyclerView.ViewHolder {
-        public TextView textView;
-
-        public ViewHolder(View itemView) {
-            super(itemView);
-            this.textView = (TextView) itemView.findViewById(R.id.textView);
-//            relativeLayout = (RelativeLayout)itemView.findViewById(R.id.relativeLayout);
-        }
+        return localDataSet.size();
     }
 }

@@ -1,35 +1,33 @@
-package comp5216.sydney.edu.fridgebutler.adapter;
-
-import android.media.Image;
-
-import java.io.Serializable;
+package comp5216.sydney.edu.fridgebutler.Adapter;
 
 public class Item {
-    private String itemName;
-    private String time;
+    private String name;
+    private String expiryDate;
     private String docRef;
-    private String image;
 
-    public Item(String name, String time, String docRef) {
-        this.itemName = name;
-        this.time = time;
+
+    public Item(String name, String expiryDate, String docRef) {
+        this.name = name;
+        this.expiryDate = expiryDate;
         this.docRef = docRef;
 
     }
 
-    public void setImage(String image){ this.image = image;}
+    public Item(String name, String docRef) {
+        this.name = name;
+        this.expiryDate = expiryDate;
+        this.docRef = docRef;
 
-    public String getName() {
-        return itemName;
     }
 
-    public String getTime() {
-        return time;
+    public String getName() {
+        return name;
+    }
+
+    public String getExpiryDate() {
+        return expiryDate;
     }
 
     public String getDocRef(){return docRef;}
 
-    public String getImage() {
-        return image;
-    }
 }

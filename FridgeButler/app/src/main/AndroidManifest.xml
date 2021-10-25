@@ -18,10 +18,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FridgeButler">
         <activity
-            android:name=".recipe.SelectedRecipe"
+            android:name=".ShoppingList.ShoppingList"
             android:exported="true" />
         <activity
-            android:name=".recipe.RecommendRecipe"
+            android:name=".EditItem"
+            android:exported="true" />
+        <activity
+            android:name=".Map.UpItem"
+            android:exported="true" />
+        <activity
+            android:name=".Recipe.View.RecipeSelected"
+            android:exported="true" />
+        <activity
+            android:name=".Recipe.View.RecipeRecommendation"
             android:exported="true" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -43,7 +52,7 @@
             android:name=".Register"
             android:exported="true" />
         <activity
-            android:name=".EditList"
+            android:name=".AddItem"
             android:exported="true" />
         <activity
             android:name=".Setting"
