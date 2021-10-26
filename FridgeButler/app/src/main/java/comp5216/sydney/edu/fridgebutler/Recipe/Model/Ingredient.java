@@ -1,39 +1,27 @@
-package comp5216.sydney.edu.fridgebutler.recipe;
+package comp5216.sydney.edu.fridgebutler.Recipe.Model;
 
 
 
-
-import android.os.Build;
 
 import java.io.Serializable;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 
 public class Ingredient implements Serializable {
 
-    public static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("dd MMM YYYY");
-
     private String name;
-    private String addedDate;
-    private String expiryDate;
-    private String category;
-    private String Uuid;
     private String image;
     private String amount;
     private String unit;
+    private String id;
+    private String original;
 
     public Ingredient() {
-        // Default constructor required for Firebase
     }
 
-    public Ingredient(String IngredientName, String category, Date expDate) {
-        this.addedDate = new Date().toString();
+    public Ingredient(String IngredientName) {
         this.name = IngredientName;
-        this.category = category;
-        this.expiryDate = DATE_FORMAT.format(expDate);
     }
 
     public String getName() {
@@ -47,7 +35,6 @@ public class Ingredient implements Serializable {
     public String getImage() {
         return image;
     }
-
 
     public void setImage(String image) {
         this.image = image;
@@ -68,4 +55,13 @@ public class Ingredient implements Serializable {
     public void setUnit(String unit) {
         this.unit = unit;
     }
+
+    public void setId(String id){this.id = id;}
+
+    public String getId(){return id;};
+
+    public void setOriginal(String original){this.original = original;}
+
+    public String getOriginal(){return this.original;}
+
 }

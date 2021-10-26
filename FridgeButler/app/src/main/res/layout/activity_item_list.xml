@@ -5,7 +5,7 @@
     android:background="@color/mywhite"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".adapter.itemAdapter">
+    tools:context=".Adapter.ItemAdapter">
 
     <Button
         android:id="@+id/addItem"

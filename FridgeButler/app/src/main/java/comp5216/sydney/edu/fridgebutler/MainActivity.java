@@ -4,12 +4,15 @@ import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
 
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
+import android.app.DatePickerDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,11 +25,15 @@ import com.google.android.material.navigation.NavigationView;
 
 import android.content.Intent;
 import android.util.Log;
+import android.widget.Button;
+import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.ListView;
 
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.common.collect.Maps;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
@@ -37,15 +44,20 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
+import java.util.Comparator;
+import java.util.List;
 
 import comp5216.sydney.edu.fridgebutler.Map.MapsActivity;
-import comp5216.sydney.edu.fridgebutler.adapter.DataCallBack;
-import comp5216.sydney.edu.fridgebutler.adapter.Item;
-import comp5216.sydney.edu.fridgebutler.adapter.itemAdapter;
-import comp5216.sydney.edu.fridgebutler.recipe.RecommendRecipe;
+import comp5216.sydney.edu.fridgebutler.Adapter.DataCallBack;
+import comp5216.sydney.edu.fridgebutler.Adapter.Item;
+import comp5216.sydney.edu.fridgebutler.Adapter.ItemAdapter;
+import comp5216.sydney.edu.fridgebutler.Map.UpItem;
+import comp5216.sydney.edu.fridgebutler.Recipe.View.RecipeRecommendation;
+import comp5216.sydney.edu.fridgebutler.ShoppingList.ShoppingList;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     int REQUEST_OPEN_EDITLIST = 101;
+    int REQUEST_EDIT_ITEM = 102 ;
 
     public DrawerLayout drawerLayout;
     public ActionBarDrawerToggle actionBarDrawerToggle;
@@ -56,10 +68,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
     ArrayList <Item> itemList;
-    itemAdapter adapter;
+    ItemAdapter adapter;
     ListView listView;
 
     ArrayList <Item> expiredFood;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,9 +100,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        itemList = new ArrayList <Item> ();
         expiredFood = new ArrayList<>();
-        adapter = new itemAdapter(this, itemList);
+        itemList = new ArrayList <Item> ();
+        adapter = new ItemAdapter(this, itemList);
 
 
         loadData(new DataCallBack() {
@@ -103,13 +116,23 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         listView = findViewById(R.id.list_item);
         listView.setAdapter(adapter);
 
-
     }
 
     private void setupListViewListener() {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int position, long rowID) {
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(MainActivity.this, EditItem.class);
+                intent.putExtra("itemName", itemList.get(i).getName());
+                intent.putExtra("expiryDate", itemList.get(i).getExpiryDate());
+                intent.putExtra("docRef", itemList.get(i).getDocRef());
+                startActivityForResult(intent, REQUEST_EDIT_ITEM);
+            }
+        });
+
+        listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> adapterView, View view, int position, long rowID) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                 builder.setTitle(R.string.dialog_delete_title)
                         .setMessage(R.string.dialog_delete_msg)
@@ -139,9 +162,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                             }
                         });
                 builder.create().show();
+                return true;
             }
         });
-
     }
 
     @Override
@@ -166,21 +189,41 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         else if(id == R.id.nav_settings){
             startActivity(new Intent(getApplicationContext(), Setting.class));
         }
-        else if(id == R.id.listItem){
-            //startActivity(new Intent(getApplicationContext(), EditList.class));
-            Intent intent = new Intent(MainActivity.this, EditList.class);
+        else if(id == R.id.nav_edit_item){
+            //chnage here
+            Intent intent = new Intent(getApplicationContext(), AddItem.class);
             startActivityForResult(intent, REQUEST_OPEN_EDITLIST);
         }
         else if(id == R.id.nav_map){
             startActivity(new Intent(getApplicationContext(), MapsActivity.class));
         }
-        else if(id == R.id.nav_recipe){
-            startActivity(new Intent(getApplicationContext(), RecommendRecipe.class));
+        else if(id == R.id.nav_recommend){
+            Intent intent = new Intent(getApplicationContext(), RecipeRecommendation.class);
+            loadData(new DataCallBack() {
+                @Override
+                public void onComplete(ArrayList<Item> item) {
+                    ArrayList<String> ingredientList = new ArrayList<>();
+                    for(int i = 0; i < itemList.size(); i++){
+                        ingredientList.add(itemList.get(i).getName());
+                    }
+                    Log.d(TAG, "Check extras sent" + String.valueOf(ingredientList.size()));
+                    intent.putExtra("ingredientList", ingredientList);
+                    startActivity(intent);
+                }
+            });
+
         }
-        drawerLayout.closeDrawers();
+        else if(id == R.id.nav_offer){
+            startActivity(new Intent(getApplicationContext(), UpItem.class));
+        }
+        else if(id == R.id.nav_shopping){
+            startActivity(new Intent(getApplicationContext(), ShoppingList.class));
+        }
         return true;
     }
 
+
+    //change here
     @SuppressLint("MissingSuperCall")
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -194,10 +237,25 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 adapter.notifyDataSetChanged();
             }
         }
+        else if (requestCode == REQUEST_EDIT_ITEM) {
+            if (resultCode == RESULT_OK) {
+                String editItemName = data.getExtras().getString("ItemName");
+                String editItemTime = data.getExtras().getString("ItemTime");
+                String editDocID = data.getExtras().getString("DocID");
+                Item item = new Item(editItemName, editItemTime, editDocID);
+                Log.d(TAG, "check edit intent: " + item.getName());
+                for(int i = 0 ; i < itemList.size(); i++){
+                 if(itemList.get(i).getDocRef().equals(item.getDocRef())){
+                     itemList.set(i, item);
+                 }
+                }
+                adapter.notifyDataSetChanged();
+            }
+        }
+
     }
 
-   /** Load food list from cloud storage, only execute once */
-   public void loadData(DataCallBack dataCallBack){
+    public void loadData(DataCallBack dataCallBack){
         CollectionReference collectionRef = db.collection("ingredients").document(user_id).collection("IngredientList");
         collectionRef.get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
@@ -217,7 +275,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
                         // Calculate remaining days
                         Calendar userDeadline = Calendar.getInstance();
-                        userDeadline.set(year,month,day);
+                        userDeadline.set(year,month-1,day);
                         Long diff = userDeadline.getTimeInMillis() - System.currentTimeMillis();
                         int days = (int)(diff / 86400000); diff -= days * 86400000;
                         String remainingDays = String.format("%d days left", days);
@@ -232,7 +290,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     }
                     dataCallBack.onComplete(itemList);
                     checkExpiry();
-
                 } else {
                     Log.d(TAG, "Error getting documents: ", task.getException());
                 }
@@ -242,22 +299,23 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     // Check status of added food, suggest options for expired food
     public void checkExpiry() {
+        ArrayList<String> ingredientList = new ArrayList<>();
         int flag = 0; // flag to signal if there is food that will expire in 1 day
         for (int i=0; i < itemList.size(); i++) {
-            if (itemList.get(i).getTime().equals("OVERDUE")) {
+            if (itemList.get(i).getExpiryDate().equals("OVERDUE")) {
                 if (!expiredFood.contains(itemList.get(i))) {
                     expiredFood.add(itemList.get(i));
                 }
             }
 
             if (flag == 0) {
-                if (itemList.get(i).getTime().charAt(0) == '1') {
+                if (itemList.get(i).getExpiryDate().charAt(0) == '1') {
                     // If the food will expire in 1 day, suggest the user to get recipe
                     flag = 1;
+                    ingredientList.add(itemList.get(i).getName());
                 }
             }
         }
-
 
         // Ask user if want to remove all the expired food
         if (expiredFood.size() != 0) {
@@ -305,7 +363,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialogInterface, int i) {
                             // Navigate to recipe
-                            startActivity(new Intent(getApplicationContext(), RecommendRecipe.class));
+                            Intent intent = new Intent(getApplicationContext(), RecipeRecommendation.class);
+                            intent.putExtra("ingredientList", ingredientList);
+                            Log.d(TAG, "Check ingredient List" + ingredientList.size());
+                            startActivity(intent);
+//                            startActivity(new Intent(getApplicationContext(), RecipeRecommendation.class));
                         }
                     })
                     .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -318,8 +380,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             builder.create().show();
         }
     }
-
-
 
 }
 

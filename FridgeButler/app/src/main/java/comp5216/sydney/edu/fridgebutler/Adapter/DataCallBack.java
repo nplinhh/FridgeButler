@@ -1,8 +1,6 @@
-package comp5216.sydney.edu.fridgebutler.adapter;
+package comp5216.sydney.edu.fridgebutler.Adapter;
 
 import java.util.ArrayList;
-
-import comp5216.sydney.edu.fridgebutler.adapter.Item;
 
 public interface DataCallBack {
     void onComplete(ArrayList<Item> item);
