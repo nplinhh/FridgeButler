@@ -4,6 +4,10 @@
         "source": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\src\\main\\res\\layout\\activity_register.xml"
     },
     {
+        "merged": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_account_circle_24.xml.flat",
+        "source": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\src\\main\\res\\drawable\\ic_baseline_account_circle_24.xml"
+    },
+    {
         "merged": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\build\\intermediates\\merged_res\\debug\\font_basic.xml.flat",
         "source": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\src\\main\\res\\font\\basic.xml"
     },
@@ -16,6 +20,10 @@
         "source": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\src\\main\\res\\drawable\\background_retrieved.xml"
     },
     {
+        "merged": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_menu_gallery.xml.flat",
+        "source": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\src\\main\\res\\drawable\\ic_menu_gallery.xml"
+    },
+    {
         "merged": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\build\\intermediates\\merged_res\\debug\\drawable_rounded_rectangle.png.flat",
         "source": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\src\\main\\res\\drawable\\rounded_rectangle.png"
     },
@@ -24,8 +32,20 @@
         "source": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\src\\main\\res\\drawable\\background_header_desgin.xml"
     },
     {
+        "merged": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_setting.xml.flat",
+        "source": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\src\\main\\res\\layout\\activity_setting.xml"
+    },
+    {
         "merged": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\build\\intermediates\\merged_res\\debug\\layout_update_food.xml.flat",
         "source": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\src\\main\\res\\layout\\update_food.xml"
+    },
+    {
+        "merged": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_map_24.xml.flat",
+        "source": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\src\\main\\res\\drawable\\ic_baseline_map_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\build\\intermediates\\merged_res\\debug\\drawable_side_nav_bar.xml.flat",
+        "source": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\src\\main\\res\\drawable\\side_nav_bar.xml"
     },
     {
         "merged": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
@@ -36,12 +56,24 @@
         "source": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\src\\main\\res\\drawable\\in.png"
     },
     {
+        "merged": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_item_list.xml.flat",
+        "source": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\src\\main\\res\\layout\\activity_item_list.xml"
+    },
+    {
         "merged": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
     {
+        "merged": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\build\\intermediates\\merged_res\\debug\\layout_custom_info_window.xml.flat",
+        "source": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\src\\main\\res\\layout\\custom_info_window.xml"
+    },
+    {
         "merged": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\build\\intermediates\\merged_res\\debug\\drawable_username_right.png.flat",
         "source": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\src\\main\\res\\drawable\\username_right.png"
+    },
+    {
+        "merged": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_settings_24.xml.flat",
+        "source": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\src\\main\\res\\drawable\\ic_baseline_settings_24.xml"
     },
     {
         "merged": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_show_profile.xml.flat",
@@ -104,12 +136,16 @@
         "source": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\src\\main\\res\\menu\\nav_menu.xml"
     },
     {
-        "merged": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.webp"
-    },
-    {
         "merged": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_lock_24.xml.flat",
         "source": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\src\\main\\res\\drawable\\ic_baseline_lock_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_maps.xml.flat",
+        "source": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\src\\main\\res\\layout\\activity_maps.xml"
+    },
+    {
+        "merged": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.webp"
     },
     {
         "merged": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\build\\intermediates\\merged_res\\debug\\font_indie_flower.xml.flat",
@@ -164,6 +200,10 @@
         "source": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\src\\main\\res\\drawable\\background_newtask.xml"
     },
     {
+        "merged": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\build\\intermediates\\merged_res\\debug\\layout_adapter_listview.xml.flat",
+        "source": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\src\\main\\res\\layout\\adapter_listview.xml"
+    },
+    {
         "merged": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\build\\intermediates\\merged_res\\debug\\drawable_shiwu.png.flat",
         "source": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\src\\main\\res\\drawable\\shiwu.png"
     },
@@ -192,6 +232,14 @@
         "source": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\src\\main\\res\\layout\\bottom.xml"
     },
     {
+        "merged": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_selected_recipe.xml.flat",
+        "source": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\src\\main\\res\\layout\\activity_selected_recipe.xml"
+    },
+    {
+        "merged": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_edit_list.xml.flat",
+        "source": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\src\\main\\res\\layout\\activity_edit_list.xml"
+    },
+    {
         "merged": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\build\\intermediates\\merged_res\\debug\\drawable_caidan.png.flat",
         "source": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\src\\main\\res\\drawable\\caidan.png"
     },
@@ -200,16 +248,20 @@
         "source": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\src\\main\\res\\drawable\\background_home.xml"
     },
     {
-        "merged": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\build\\intermediates\\merged_res\\debug\\layout_tab1.xml.flat",
-        "source": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\src\\main\\res\\layout\\tab1.xml"
-    },
-    {
         "merged": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\build\\intermediates\\merged_res\\debug\\drawable_x.png.flat",
         "source": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\src\\main\\res\\drawable\\x.png"
     },
     {
+        "merged": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\build\\intermediates\\merged_res\\debug\\layout_tab1.xml.flat",
+        "source": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\src\\main\\res\\layout\\tab1.xml"
+    },
+    {
         "merged": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\build\\intermediates\\merged_res\\debug\\font_poppinsmedium.ttf.flat",
         "source": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\src\\main\\res\\font\\poppinsmedium.ttf"
+    },
+    {
+        "merged": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_menu_slideshow.xml.flat",
+        "source": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\src\\main\\res\\drawable\\ic_menu_slideshow.xml"
     },
     {
         "merged": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
@@ -248,6 +300,14 @@
         "source": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\src\\main\\res\\drawable\\tw.png"
     },
     {
+        "merged": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_menu_camera.xml.flat",
+        "source": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\src\\main\\res\\drawable\\ic_menu_camera.xml"
+    },
+    {
+        "merged": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_recommend_recipe.xml.flat",
+        "source": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\src\\main\\res\\layout\\activity_recommend_recipe.xml"
+    },
+    {
         "merged": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\build\\intermediates\\merged_res\\debug\\layout_top.xml.flat",
         "source": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\src\\main\\res\\layout\\top.xml"
     },
@@ -262,5 +322,9 @@
     {
         "merged": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\build\\intermediates\\merged_res\\debug\\drawable_background_textview_2.xml.flat",
         "source": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\src\\main\\res\\drawable\\background_textview_2.xml"
+    },
+    {
+        "merged": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_add_circle_outline_24.xml.flat",
+        "source": "C:\\Users\\A\\Documents\\GitHub\\FridgeButler\\FridgeButler\\app\\src\\main\\res\\drawable\\ic_baseline_add_circle_outline_24.xml"
     }
 ]

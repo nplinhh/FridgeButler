@@ -1,14 +1,117 @@
-comp5216/sydney/edu/fridgebutler/BuildConfig.java
- comp5216.sydney.edu.fridgebutler.BuildConfig
-comp5216/sydney/edu/fridgebutler/ShowProfile.java
- comp5216.sydney.edu.fridgebutler.ShowProfile
- comp5216.sydney.edu.fridgebutler.ShowProfile$1
+comp5216/sydney/edu/fridgebutler/databinding/ActivityRegisterBinding.java
+ comp5216.sydney.edu.fridgebutler.databinding.ActivityRegisterBinding
+comp5216/sydney/edu/fridgebutler/Login.java
+ comp5216.sydney.edu.fridgebutler.Login
+comp5216/sydney/edu/fridgebutler/databinding/RecipelistBinding.java
+ comp5216.sydney.edu.fridgebutler.databinding.RecipelistBinding
+comp5216/sydney/edu/fridgebutler/Setting.java
+ comp5216.sydney.edu.fridgebutler.Setting
+ comp5216.sydney.edu.fridgebutler.Setting$1
+comp5216/sydney/edu/fridgebutler/databinding/ActivityRecommendRecipeBinding.java
+ comp5216.sydney.edu.fridgebutler.databinding.ActivityRecommendRecipeBinding
+comp5216/sydney/edu/fridgebutler/MainActivity.java
+ comp5216.sydney.edu.fridgebutler.MainActivity
+ comp5216.sydney.edu.fridgebutler.MainActivity$1
+ comp5216.sydney.edu.fridgebutler.MainActivity$2
+ comp5216.sydney.edu.fridgebutler.MainActivity$2$1
+ comp5216.sydney.edu.fridgebutler.MainActivity$2$1$1
+ comp5216.sydney.edu.fridgebutler.MainActivity$2$1$2
+ comp5216.sydney.edu.fridgebutler.MainActivity$2$2
+ comp5216.sydney.edu.fridgebutler.MainActivity$3
+ comp5216.sydney.edu.fridgebutler.MainActivity$4
+ comp5216.sydney.edu.fridgebutler.MainActivity$4$1
+ comp5216.sydney.edu.fridgebutler.MainActivity$4$2
+ comp5216.sydney.edu.fridgebutler.MainActivity$5
+ comp5216.sydney.edu.fridgebutler.MainActivity$6
+ comp5216.sydney.edu.fridgebutler.MainActivity$7
+comp5216/sydney/edu/fridgebutler/databinding/ShoppinglistBinding.java
+ comp5216.sydney.edu.fridgebutler.databinding.ShoppinglistBinding
+comp5216/sydney/edu/fridgebutler/databinding/UpdateFoodBinding.java
+ comp5216.sydney.edu.fridgebutler.databinding.UpdateFoodBinding
 comp5216/sydney/edu/fridgebutler/Register.java
  comp5216.sydney.edu.fridgebutler.Register
  comp5216.sydney.edu.fridgebutler.Register$1
  comp5216.sydney.edu.fridgebutler.Register$1$1
  comp5216.sydney.edu.fridgebutler.Register$1$2
-comp5216/sydney/edu/fridgebutler/Login.java
- comp5216.sydney.edu.fridgebutler.Login
-comp5216/sydney/edu/fridgebutler/MainActivity.java
- comp5216.sydney.edu.fridgebutler.MainActivity
+comp5216/sydney/edu/fridgebutler/Map/CustomInfoWindowAdapter.java
+ comp5216.sydney.edu.fridgebutler.Map.CustomInfoWindowAdapter
+comp5216/sydney/edu/fridgebutler/databinding/TopBinding.java
+ comp5216.sydney.edu.fridgebutler.databinding.TopBinding
+comp5216/sydney/edu/fridgebutler/databinding/ActivitySelectedRecipeBinding.java
+ comp5216.sydney.edu.fridgebutler.databinding.ActivitySelectedRecipeBinding
+comp5216/sydney/edu/fridgebutler/recipe/SpoonacularApi.java
+ comp5216.sydney.edu.fridgebutler.recipe.SpoonacularApi
+comp5216/sydney/edu/fridgebutler/recipe/Ingredient.java
+ comp5216.sydney.edu.fridgebutler.recipe.Ingredient
+comp5216/sydney/edu/fridgebutler/databinding/ActivityLoginBinding.java
+ comp5216.sydney.edu.fridgebutler.databinding.ActivityLoginBinding
+comp5216/sydney/edu/fridgebutler/databinding/Tab1Binding.java
+ comp5216.sydney.edu.fridgebutler.databinding.Tab1Binding
+comp5216/sydney/edu/fridgebutler/databinding/Tab2Binding.java
+ comp5216.sydney.edu.fridgebutler.databinding.Tab2Binding
+comp5216/sydney/edu/fridgebutler/databinding/ActivitySettingBinding.java
+ comp5216.sydney.edu.fridgebutler.databinding.ActivitySettingBinding
+comp5216/sydney/edu/fridgebutler/databinding/ActivityItemListBinding.java
+ comp5216.sydney.edu.fridgebutler.databinding.ActivityItemListBinding
+comp5216/sydney/edu/fridgebutler/databinding/Tab3Binding.java
+ comp5216.sydney.edu.fridgebutler.databinding.Tab3Binding
+comp5216/sydney/edu/fridgebutler/Map/MapsActivity.java
+ comp5216.sydney.edu.fridgebutler.Map.MapsActivity
+ comp5216.sydney.edu.fridgebutler.Map.MapsActivity$1
+ comp5216.sydney.edu.fridgebutler.Map.MapsActivity$1$1
+ comp5216.sydney.edu.fridgebutler.Map.MapsActivity$2
+comp5216/sydney/edu/fridgebutler/adapter/itemAdapter.java
+ comp5216.sydney.edu.fridgebutler.adapter.itemAdapter
+comp5216/sydney/edu/fridgebutler/databinding/CustomInfoWindowBinding.java
+ comp5216.sydney.edu.fridgebutler.databinding.CustomInfoWindowBinding
+comp5216/sydney/edu/fridgebutler/databinding/AddFoodBinding.java
+ comp5216.sydney.edu.fridgebutler.databinding.AddFoodBinding
+comp5216/sydney/edu/fridgebutler/databinding/ActivityEditListBinding.java
+ comp5216.sydney.edu.fridgebutler.databinding.ActivityEditListBinding
+comp5216/sydney/edu/fridgebutler/recipe/SelectedRecipe.java
+ comp5216.sydney.edu.fridgebutler.recipe.SelectedRecipe
+ comp5216.sydney.edu.fridgebutler.recipe.SelectedRecipe$1
+comp5216/sydney/edu/fridgebutler/EditList.java
+ comp5216.sydney.edu.fridgebutler.EditList
+ comp5216.sydney.edu.fridgebutler.EditList$1
+ comp5216.sydney.edu.fridgebutler.EditList$2
+ comp5216.sydney.edu.fridgebutler.EditList$3
+ comp5216.sydney.edu.fridgebutler.EditList$4
+comp5216/sydney/edu/fridgebutler/databinding/ActivityMainBinding.java
+ comp5216.sydney.edu.fridgebutler.databinding.ActivityMainBinding
+comp5216/sydney/edu/fridgebutler/BuildConfig.java
+ comp5216.sydney.edu.fridgebutler.BuildConfig
+comp5216/sydney/edu/fridgebutler/ShowProfile.java
+ comp5216.sydney.edu.fridgebutler.ShowProfile
+ comp5216.sydney.edu.fridgebutler.ShowProfile$1
+comp5216/sydney/edu/fridgebutler/recipe/Instruction.java
+ comp5216.sydney.edu.fridgebutler.recipe.Instruction
+ comp5216.sydney.edu.fridgebutler.recipe.Instruction$Step
+comp5216/sydney/edu/fridgebutler/databinding/FoodlistBinding.java
+ comp5216.sydney.edu.fridgebutler.databinding.FoodlistBinding
+comp5216/sydney/edu/fridgebutler/databinding/ActivityMapsBinding.java
+ comp5216.sydney.edu.fridgebutler.databinding.ActivityMapsBinding
+comp5216/sydney/edu/fridgebutler/databinding/BottomBinding.java
+ comp5216.sydney.edu.fridgebutler.databinding.BottomBinding
+comp5216/sydney/edu/fridgebutler/recipe/Recipe.java
+ comp5216.sydney.edu.fridgebutler.recipe.Recipe
+comp5216/sydney/edu/fridgebutler/adapter/DataCallBack.java
+ comp5216.sydney.edu.fridgebutler.adapter.DataCallBack
+comp5216/sydney/edu/fridgebutler/databinding/RecipeDetailBinding.java
+ comp5216.sydney.edu.fridgebutler.databinding.RecipeDetailBinding
+comp5216/sydney/edu/fridgebutler/databinding/AdapterListviewBinding.java
+ comp5216.sydney.edu.fridgebutler.databinding.AdapterListviewBinding
+comp5216/sydney/edu/fridgebutler/databinding/Tab4Binding.java
+ comp5216.sydney.edu.fridgebutler.databinding.Tab4Binding
+comp5216/sydney/edu/fridgebutler/databinding/ActivityShowProfileBinding.java
+ comp5216.sydney.edu.fridgebutler.databinding.ActivityShowProfileBinding
+comp5216/sydney/edu/fridgebutler/recipe/RecipeCallBack.java
+ comp5216.sydney.edu.fridgebutler.recipe.RecipeCallBack
+comp5216/sydney/edu/fridgebutler/recipe/RecommendRecipe.java
+ comp5216.sydney.edu.fridgebutler.recipe.RecommendRecipe
+ comp5216.sydney.edu.fridgebutler.recipe.RecommendRecipe$1
+ comp5216.sydney.edu.fridgebutler.recipe.RecommendRecipe$2
+ comp5216.sydney.edu.fridgebutler.recipe.RecommendRecipe$3
+ comp5216.sydney.edu.fridgebutler.recipe.RecommendRecipe$4
+comp5216/sydney/edu/fridgebutler/adapter/Item.java
+ comp5216.sydney.edu.fridgebutler.adapter.Item

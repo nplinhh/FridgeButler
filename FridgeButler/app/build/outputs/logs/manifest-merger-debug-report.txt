@@ -1,16 +1,22 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:2:1-34:12
+ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:2:1-68:12
+INJECTED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:2:1-68:12
+INJECTED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:2:1-68:12
+INJECTED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:2:1-68:12
+MERGED from [androidx.databinding:viewbinding:7.0.0] C:\Users\A\.gradle\caches\transforms-3\890ead7a225e8e8adbabf1126908806d\transformed\jetified-viewbinding-7.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-analytics:19.0.2] C:\Users\A\.gradle\caches\transforms-3\c827c61ad6d60fc139c10ab50fc2dfcb\transformed\jetified-firebase-analytics-19.0.2\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.navigation:navigation-ui:2.3.5] C:\Users\A\.gradle\caches\transforms-3\b084315c444fbeff8ae8e14e44494261\transformed\navigation-ui-2.3.5\AndroidManifest.xml:17:1-24:12
+MERGED from [com.karumi:dexter:6.2.3] C:\Users\A\.gradle\caches\transforms-3\07a1660b6893aeafb2a86e9cc336f120\transformed\jetified-dexter-6.2.3\AndroidManifest.xml:17:1-32:12
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\A\.gradle\caches\transforms-3\a4db12b072650e13bc36a4fc9443bd47\transformed\material-1.4.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.1] C:\Users\A\.gradle\caches\transforms-3\66ff56fb595a495ee70bba0fa573cb3a\transformed\constraintlayout-2.1.1\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat:1.3.1] C:\Users\A\.gradle\caches\transforms-3\2fb21fbcddcb4a1a19c9cd01cfb49ddb\transformed\appcompat-1.3.1\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\A\.gradle\caches\transforms-3\99e33d49eb6cb3c8d9236007e84fbe53\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:17:1-83:12
 MERGED from [com.google.firebase:firebase-firestore:23.0.4] C:\Users\A\.gradle\caches\transforms-3\985bae2d4cc13dc6bdefafd8fef5f2c6\transformed\jetified-firebase-firestore-23.0.4\AndroidManifest.xml:2:1-26:12
+MERGED from [com.google.android.gms:play-services-maps:17.0.1] C:\Users\A\.gradle\caches\transforms-3\2282cd92a21a4913fba18ca13e0438c2\transformed\jetified-play-services-maps-17.0.1\AndroidManifest.xml:17:1-44:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.3.1] C:\Users\A\.gradle\caches\transforms-3\f1f026f4dcad4ad897c38586c7b8c793\transformed\jetified-lifecycle-livedata-ktx-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1] C:\Users\A\.gradle\caches\transforms-3\f4f6124a99b0bb2f6e8eb0f5b14d327a\transformed\jetified-lifecycle-viewmodel-ktx-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-fragment:2.3.5] C:\Users\A\.gradle\caches\transforms-3\942d4472461c91ada9618abca19c7794\transformed\navigation-fragment-2.3.5\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\A\.gradle\caches\transforms-3\451a339f9d7b85ee9761c9ed0292dc01\transformed\jetified-firebase-auth-interop-20.0.0\AndroidManifest.xml:2:1-10:12
 MERGED from [com.google.android.gms:play-services-measurement-api:19.0.2] C:\Users\A\.gradle\caches\transforms-3\e85fbdcec447e91f03600df3942bd942\transformed\jetified-play-services-measurement-api-19.0.2\AndroidManifest.xml:17:1-36:12
 MERGED from [com.google.firebase:firebase-installations:17.0.0] C:\Users\A\.gradle\caches\transforms-3\18c0e629690351d48432cfb385b45491\transformed\jetified-firebase-installations-17.0.0\AndroidManifest.xml:2:1-24:12
@@ -63,7 +69,8 @@ MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\User
 MERGED from [com.google.firebase:firebase-components:17.0.0] C:\Users\A\.gradle\caches\transforms-3\5ef5de6b86aba927bed289e100b66e4d\transformed\jetified-firebase-components-17.0.0\AndroidManifest.xml:15:1-23:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\A\.gradle\caches\transforms-3\c11d12a2baf277b837d8806c6f87fc44\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
 MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\A\.gradle\caches\transforms-3\e8ef85e514fc42cbbad75b9b3a8e6cfc\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\A\.gradle\caches\transforms-3\353f40e5d33d4a82de3f263c7f387564\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.3.1] C:\Users\A\.gradle\caches\transforms-3\18cb4257677cfdfa86ad564015b1a064\transformed\lifecycle-livedata-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.3.1] C:\Users\A\.gradle\caches\transforms-3\363a5db4a78a7f671cce89ecc6d5b84a\transformed\jetified-lifecycle-livedata-core-ktx-2.3.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] C:\Users\A\.gradle\caches\transforms-3\d2e0dab81ac4ce61a6a5b8e8d3d5f158\transformed\lifecycle-livedata-core-2.3.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\A\.gradle\caches\transforms-3\4fc344dd16f2c32b18557242fa2f903e\transformed\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\A\.gradle\caches\transforms-3\d29c7a8a10622f03cba94cde485782f1\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -72,29 +79,39 @@ MERGED from [androidx.print:print:1.0.0] C:\Users\A\.gradle\caches\transforms-3\
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\A\.gradle\caches\transforms-3\bcde78bc88dd626eb99fc345b357b7d4\transformed\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\A\.gradle\caches\transforms-3\0e4fe9ac0069942711d5424f8db25fa9\transformed\jetified-protolite-well-known-types-18.0.0\AndroidManifest.xml:2:1-11:12
 MERGED from [io.grpc:grpc-android:1.28.0] C:\Users\A\.gradle\caches\transforms-3\209013ccce9f4844e6ae6768b87dfdab\transformed\jetified-grpc-android-1.28.0\AndroidManifest.xml:2:1-13:12
-INJECTED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:2:1-68:12
+INJECTED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:2:1-68:12
+INJECTED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:2:1-68:12
 	package
 		ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:3:5-47
 		INJECTED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:2:1-34:12
+		ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:2:1-68:12
 		INJECTED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:2:1-34:12
+		ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:2:1-68:12
 		INJECTED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:9:5-81
+	android:name
+		ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:9:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:10:5-79
+	android:name
+		ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:10:22-76
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:5:5-67
+ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:11:5-67
 MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\A\.gradle\caches\transforms-3\99e33d49eb6cb3c8d9236007e84fbe53\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:23:5-67
 MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\A\.gradle\caches\transforms-3\99e33d49eb6cb3c8d9236007e84fbe53\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:23:5-67
 MERGED from [com.google.firebase:firebase-firestore:23.0.4] C:\Users\A\.gradle\caches\transforms-3\985bae2d4cc13dc6bdefafd8fef5f2c6\transformed\jetified-firebase-firestore-23.0.4\AndroidManifest.xml:14:5-67
 MERGED from [com.google.firebase:firebase-firestore:23.0.4] C:\Users\A\.gradle\caches\transforms-3\985bae2d4cc13dc6bdefafd8fef5f2c6\transformed\jetified-firebase-firestore-23.0.4\AndroidManifest.xml:14:5-67
+MERGED from [com.google.android.gms:play-services-maps:17.0.1] C:\Users\A\.gradle\caches\transforms-3\2282cd92a21a4913fba18ca13e0438c2\transformed\jetified-play-services-maps-17.0.1\AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-maps:17.0.1] C:\Users\A\.gradle\caches\transforms-3\2282cd92a21a4913fba18ca13e0438c2\transformed\jetified-play-services-maps-17.0.1\AndroidManifest.xml:24:5-67
 MERGED from [com.google.android.gms:play-services-measurement-api:19.0.2] C:\Users\A\.gradle\caches\transforms-3\e85fbdcec447e91f03600df3942bd942\transformed\jetified-play-services-measurement-api-19.0.2\AndroidManifest.xml:22:5-67
 MERGED from [com.google.android.gms:play-services-measurement-api:19.0.2] C:\Users\A\.gradle\caches\transforms-3\e85fbdcec447e91f03600df3942bd942\transformed\jetified-play-services-measurement-api-19.0.2\AndroidManifest.xml:22:5-67
 MERGED from [com.google.firebase:firebase-installations:17.0.0] C:\Users\A\.gradle\caches\transforms-3\18c0e629690351d48432cfb385b45491\transformed\jetified-firebase-installations-17.0.0\AndroidManifest.xml:11:5-67
@@ -106,11 +123,13 @@ MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.2] C:\Us
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:19.0.2] C:\Users\A\.gradle\caches\transforms-3\aeb03ebe35af192265f24879a60f9831\transformed\jetified-play-services-measurement-sdk-api-19.0.2\AndroidManifest.xml:23:5-67
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:19.0.2] C:\Users\A\.gradle\caches\transforms-3\aeb03ebe35af192265f24879a60f9831\transformed\jetified-play-services-measurement-sdk-api-19.0.2\AndroidManifest.xml:23:5-67
 	android:name
-		ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:5:22-64
+		ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:11:22-64
 application
-ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:7:5-32:19
+ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:13:5-66:19
 MERGED from [com.google.firebase:firebase-analytics:19.0.2] C:\Users\A\.gradle\caches\transforms-3\c827c61ad6d60fc139c10ab50fc2dfcb\transformed\jetified-firebase-analytics-19.0.2\AndroidManifest.xml:7:5-20
 MERGED from [com.google.firebase:firebase-analytics:19.0.2] C:\Users\A\.gradle\caches\transforms-3\c827c61ad6d60fc139c10ab50fc2dfcb\transformed\jetified-firebase-analytics-19.0.2\AndroidManifest.xml:7:5-20
+MERGED from [com.karumi:dexter:6.2.3] C:\Users\A\.gradle\caches\transforms-3\07a1660b6893aeafb2a86e9cc336f120\transformed\jetified-dexter-6.2.3\AndroidManifest.xml:26:5-30:19
+MERGED from [com.karumi:dexter:6.2.3] C:\Users\A\.gradle\caches\transforms-3\07a1660b6893aeafb2a86e9cc336f120\transformed\jetified-dexter-6.2.3\AndroidManifest.xml:26:5-30:19
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\A\.gradle\caches\transforms-3\a4db12b072650e13bc36a4fc9443bd47\transformed\material-1.4.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\A\.gradle\caches\transforms-3\a4db12b072650e13bc36a4fc9443bd47\transformed\material-1.4.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.1] C:\Users\A\.gradle\caches\transforms-3\66ff56fb595a495ee70bba0fa573cb3a\transformed\constraintlayout-2.1.1\AndroidManifest.xml:9:5-20
@@ -119,6 +138,8 @@ MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\A\.gradle\caches
 MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\A\.gradle\caches\transforms-3\99e33d49eb6cb3c8d9236007e84fbe53\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:26:5-81:19
 MERGED from [com.google.firebase:firebase-firestore:23.0.4] C:\Users\A\.gradle\caches\transforms-3\985bae2d4cc13dc6bdefafd8fef5f2c6\transformed\jetified-firebase-firestore-23.0.4\AndroidManifest.xml:16:5-24:19
 MERGED from [com.google.firebase:firebase-firestore:23.0.4] C:\Users\A\.gradle\caches\transforms-3\985bae2d4cc13dc6bdefafd8fef5f2c6\transformed\jetified-firebase-firestore-23.0.4\AndroidManifest.xml:16:5-24:19
+MERGED from [com.google.android.gms:play-services-maps:17.0.1] C:\Users\A\.gradle\caches\transforms-3\2282cd92a21a4913fba18ca13e0438c2\transformed\jetified-play-services-maps-17.0.1\AndroidManifest.xml:36:5-42:19
+MERGED from [com.google.android.gms:play-services-maps:17.0.1] C:\Users\A\.gradle\caches\transforms-3\2282cd92a21a4913fba18ca13e0438c2\transformed\jetified-play-services-maps-17.0.1\AndroidManifest.xml:36:5-42:19
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\A\.gradle\caches\transforms-3\451a339f9d7b85ee9761c9ed0292dc01\transformed\jetified-firebase-auth-interop-20.0.0\AndroidManifest.xml:7:5-8:19
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\A\.gradle\caches\transforms-3\451a339f9d7b85ee9761c9ed0292dc01\transformed\jetified-firebase-auth-interop-20.0.0\AndroidManifest.xml:7:5-8:19
 MERGED from [com.google.android.gms:play-services-measurement-api:19.0.2] C:\Users\A\.gradle\caches\transforms-3\e85fbdcec447e91f03600df3942bd942\transformed\jetified-play-services-measurement-api-19.0.2\AndroidManifest.xml:26:5-34:19
@@ -156,59 +177,101 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\A\
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.5.0] C:\Users\A\.gradle\caches\transforms-3\a6ed9dfb3abf7d8541f7a1d01bf1d39b\transformed\core-1.5.0\AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:12:9-35
+		ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:18:9-35
 	android:label
-		ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:10:9-41
+		ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:16:9-41
 	android:roundIcon
-		ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:11:9-54
+		ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:17:9-54
 	android:icon
-		ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:9:9-43
+		ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:15:9-43
 	android:allowBackup
-		ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:8:9-35
+		ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:14:9-35
 	android:theme
-		ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:13:9-50
-activity#comp5216.sydney.edu.fridgebutler.ShowProfile
-ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:14:9-16:39
-	android:exported
-		ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:16:13-36
-	android:name
-		ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:15:13-40
-activity#comp5216.sydney.edu.fridgebutler.MainActivity
-ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:17:9-19:39
-	android:exported
-		ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:19:13-36
-	android:name
-		ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:18:13-41
-activity#comp5216.sydney.edu.fridgebutler.Login
+		ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:19:9-50
+activity#comp5216.sydney.edu.fridgebutler.recipe.SelectedRecipe
 ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:20:9-22:39
 	android:exported
 		ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:22:13-36
 	android:name
-		ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:21:13-34
-activity#comp5216.sydney.edu.fridgebutler.Register
-ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:23:9-31:20
+		ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:21:13-50
+activity#comp5216.sydney.edu.fridgebutler.recipe.RecommendRecipe
+ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:23:9-25:39
 	android:exported
 		ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:25:13-36
 	android:name
-		ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:24:13-37
+		ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:24:13-51
+meta-data#com.google.android.geo.API_KEY
+ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:34:9-36:55
+	android:value
+		ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:36:13-52
+	android:name
+		ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:35:13-58
+activity#comp5216.sydney.edu.fridgebutler.Map.MapsActivity
+ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:38:9-41:59
+	android:label
+		ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:41:13-56
+	android:exported
+		ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:40:13-36
+	android:name
+		ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:39:13-45
+activity#comp5216.sydney.edu.fridgebutler.Register
+ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:42:9-44:39
+	android:exported
+		ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:44:13-36
+	android:name
+		ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:43:13-37
+activity#comp5216.sydney.edu.fridgebutler.EditList
+ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:45:9-47:39
+	android:exported
+		ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:47:13-36
+	android:name
+		ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:46:13-37
+activity#comp5216.sydney.edu.fridgebutler.Setting
+ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:48:9-50:39
+	android:exported
+		ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:50:13-36
+	android:name
+		ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:49:13-36
+activity#comp5216.sydney.edu.fridgebutler.ShowProfile
+ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:51:9-53:39
+	android:exported
+		ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:53:13-36
+	android:name
+		ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:52:13-40
+activity#comp5216.sydney.edu.fridgebutler.MainActivity
+ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:54:9-56:39
+	android:exported
+		ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:56:13-36
+	android:name
+		ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:55:13-41
+activity#comp5216.sydney.edu.fridgebutler.Login
+ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:57:9-65:20
+	android:exported
+		ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:59:13-36
+	android:name
+		ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:58:13-34
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:26:13-30:29
+ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:60:13-64:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:27:17-69
+ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:61:17-69
 	android:name
-		ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:27:25-66
+		ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:61:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:29:17-77
+ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:63:17-77
 	android:name
-		ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:29:27-74
+		ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml:63:27-74
 uses-sdk
 INJECTED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml
 INJECTED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml
+MERGED from [androidx.databinding:viewbinding:7.0.0] C:\Users\A\.gradle\caches\transforms-3\890ead7a225e8e8adbabf1126908806d\transformed\jetified-viewbinding-7.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.databinding:viewbinding:7.0.0] C:\Users\A\.gradle\caches\transforms-3\890ead7a225e8e8adbabf1126908806d\transformed\jetified-viewbinding-7.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-analytics:19.0.2] C:\Users\A\.gradle\caches\transforms-3\c827c61ad6d60fc139c10ab50fc2dfcb\transformed\jetified-firebase-analytics-19.0.2\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-analytics:19.0.2] C:\Users\A\.gradle\caches\transforms-3\c827c61ad6d60fc139c10ab50fc2dfcb\transformed\jetified-firebase-analytics-19.0.2\AndroidManifest.xml:5:5-44
 MERGED from [androidx.navigation:navigation-ui:2.3.5] C:\Users\A\.gradle\caches\transforms-3\b084315c444fbeff8ae8e14e44494261\transformed\navigation-ui-2.3.5\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.navigation:navigation-ui:2.3.5] C:\Users\A\.gradle\caches\transforms-3\b084315c444fbeff8ae8e14e44494261\transformed\navigation-ui-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [com.karumi:dexter:6.2.3] C:\Users\A\.gradle\caches\transforms-3\07a1660b6893aeafb2a86e9cc336f120\transformed\jetified-dexter-6.2.3\AndroidManifest.xml:22:5-24:41
+MERGED from [com.karumi:dexter:6.2.3] C:\Users\A\.gradle\caches\transforms-3\07a1660b6893aeafb2a86e9cc336f120\transformed\jetified-dexter-6.2.3\AndroidManifest.xml:22:5-24:41
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\A\.gradle\caches\transforms-3\a4db12b072650e13bc36a4fc9443bd47\transformed\material-1.4.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\A\.gradle\caches\transforms-3\a4db12b072650e13bc36a4fc9443bd47\transformed\material-1.4.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.1] C:\Users\A\.gradle\caches\transforms-3\66ff56fb595a495ee70bba0fa573cb3a\transformed\constraintlayout-2.1.1\AndroidManifest.xml:5:5-7:41
@@ -219,6 +282,14 @@ MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\A\.gradle\caches
 MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\A\.gradle\caches\transforms-3\99e33d49eb6cb3c8d9236007e84fbe53\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:21:5-44
 MERGED from [com.google.firebase:firebase-firestore:23.0.4] C:\Users\A\.gradle\caches\transforms-3\985bae2d4cc13dc6bdefafd8fef5f2c6\transformed\jetified-firebase-firestore-23.0.4\AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.firebase:firebase-firestore:23.0.4] C:\Users\A\.gradle\caches\transforms-3\985bae2d4cc13dc6bdefafd8fef5f2c6\transformed\jetified-firebase-firestore-23.0.4\AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.android.gms:play-services-maps:17.0.1] C:\Users\A\.gradle\caches\transforms-3\2282cd92a21a4913fba18ca13e0438c2\transformed\jetified-play-services-maps-17.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:17.0.1] C:\Users\A\.gradle\caches\transforms-3\2282cd92a21a4913fba18ca13e0438c2\transformed\jetified-play-services-maps-17.0.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.3.1] C:\Users\A\.gradle\caches\transforms-3\f1f026f4dcad4ad897c38586c7b8c793\transformed\jetified-lifecycle-livedata-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.3.1] C:\Users\A\.gradle\caches\transforms-3\f1f026f4dcad4ad897c38586c7b8c793\transformed\jetified-lifecycle-livedata-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1] C:\Users\A\.gradle\caches\transforms-3\f4f6124a99b0bb2f6e8eb0f5b14d327a\transformed\jetified-lifecycle-viewmodel-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1] C:\Users\A\.gradle\caches\transforms-3\f4f6124a99b0bb2f6e8eb0f5b14d327a\transformed\jetified-lifecycle-viewmodel-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-fragment:2.3.5] C:\Users\A\.gradle\caches\transforms-3\942d4472461c91ada9618abca19c7794\transformed\navigation-fragment-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-fragment:2.3.5] C:\Users\A\.gradle\caches\transforms-3\942d4472461c91ada9618abca19c7794\transformed\navigation-fragment-2.3.5\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\A\.gradle\caches\transforms-3\451a339f9d7b85ee9761c9ed0292dc01\transformed\jetified-firebase-auth-interop-20.0.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\A\.gradle\caches\transforms-3\451a339f9d7b85ee9761c9ed0292dc01\transformed\jetified-firebase-auth-interop-20.0.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-measurement-api:19.0.2] C:\Users\A\.gradle\caches\transforms-3\e85fbdcec447e91f03600df3942bd942\transformed\jetified-play-services-measurement-api-19.0.2\AndroidManifest.xml:20:5-44
@@ -323,8 +394,10 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\A\
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\A\.gradle\caches\transforms-3\c11d12a2baf277b837d8806c6f87fc44\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\A\.gradle\caches\transforms-3\e8ef85e514fc42cbbad75b9b3a8e6cfc\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\A\.gradle\caches\transforms-3\e8ef85e514fc42cbbad75b9b3a8e6cfc\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\A\.gradle\caches\transforms-3\353f40e5d33d4a82de3f263c7f387564\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\A\.gradle\caches\transforms-3\353f40e5d33d4a82de3f263c7f387564\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.3.1] C:\Users\A\.gradle\caches\transforms-3\18cb4257677cfdfa86ad564015b1a064\transformed\lifecycle-livedata-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.3.1] C:\Users\A\.gradle\caches\transforms-3\18cb4257677cfdfa86ad564015b1a064\transformed\lifecycle-livedata-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.3.1] C:\Users\A\.gradle\caches\transforms-3\363a5db4a78a7f671cce89ecc6d5b84a\transformed\jetified-lifecycle-livedata-core-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.3.1] C:\Users\A\.gradle\caches\transforms-3\363a5db4a78a7f671cce89ecc6d5b84a\transformed\jetified-lifecycle-livedata-core-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] C:\Users\A\.gradle\caches\transforms-3\d2e0dab81ac4ce61a6a5b8e8d3d5f158\transformed\lifecycle-livedata-core-2.3.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] C:\Users\A\.gradle\caches\transforms-3\d2e0dab81ac4ce61a6a5b8e8d3d5f158\transformed\lifecycle-livedata-core-2.3.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\A\.gradle\caches\transforms-3\4fc344dd16f2c32b18557242fa2f903e\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
@@ -351,10 +424,18 @@ INJECTED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main
 		INJECTED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml
 		ADDED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\A\Documents\GitHub\FridgeButler\FridgeButler\app\src\main\AndroidManifest.xml
+activity#com.karumi.dexter.DexterActivity
+ADDED from [com.karumi:dexter:6.2.3] C:\Users\A\.gradle\caches\transforms-3\07a1660b6893aeafb2a86e9cc336f120\transformed\jetified-dexter-6.2.3\AndroidManifest.xml:27:9-29:72
+	android:theme
+		ADDED from [com.karumi:dexter:6.2.3] C:\Users\A\.gradle\caches\transforms-3\07a1660b6893aeafb2a86e9cc336f120\transformed\jetified-dexter-6.2.3\AndroidManifest.xml:29:13-69
+	android:name
+		ADDED from [com.karumi:dexter:6.2.3] C:\Users\A\.gradle\caches\transforms-3\07a1660b6893aeafb2a86e9cc336f120\transformed\jetified-dexter-6.2.3\AndroidManifest.xml:28:13-60
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\A\.gradle\caches\transforms-3\99e33d49eb6cb3c8d9236007e84fbe53\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:24:5-79
 MERGED from [com.google.firebase:firebase-firestore:23.0.4] C:\Users\A\.gradle\caches\transforms-3\985bae2d4cc13dc6bdefafd8fef5f2c6\transformed\jetified-firebase-firestore-23.0.4\AndroidManifest.xml:13:5-79
 MERGED from [com.google.firebase:firebase-firestore:23.0.4] C:\Users\A\.gradle\caches\transforms-3\985bae2d4cc13dc6bdefafd8fef5f2c6\transformed\jetified-firebase-firestore-23.0.4\AndroidManifest.xml:13:5-79
+MERGED from [com.google.android.gms:play-services-maps:17.0.1] C:\Users\A\.gradle\caches\transforms-3\2282cd92a21a4913fba18ca13e0438c2\transformed\jetified-play-services-maps-17.0.1\AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.gms:play-services-maps:17.0.1] C:\Users\A\.gradle\caches\transforms-3\2282cd92a21a4913fba18ca13e0438c2\transformed\jetified-play-services-maps-17.0.1\AndroidManifest.xml:23:5-79
 MERGED from [com.google.android.gms:play-services-measurement-api:19.0.2] C:\Users\A\.gradle\caches\transforms-3\e85fbdcec447e91f03600df3942bd942\transformed\jetified-play-services-measurement-api-19.0.2\AndroidManifest.xml:23:5-79
 MERGED from [com.google.android.gms:play-services-measurement-api:19.0.2] C:\Users\A\.gradle\caches\transforms-3\e85fbdcec447e91f03600df3942bd942\transformed\jetified-play-services-measurement-api-19.0.2\AndroidManifest.xml:23:5-79
 MERGED from [com.google.firebase:firebase-installations:17.0.0] C:\Users\A\.gradle\caches\transforms-3\18c0e629690351d48432cfb385b45491\transformed\jetified-firebase-installations-17.0.0\AndroidManifest.xml:10:5-79
@@ -461,6 +542,24 @@ ADDED from [com.google.firebase:firebase-firestore:23.0.4] C:\Users\A\.gradle\ca
 		ADDED from [com.google.firebase:firebase-firestore:23.0.4] C:\Users\A\.gradle\caches\transforms-3\985bae2d4cc13dc6bdefafd8fef5f2c6\transformed\jetified-firebase-firestore-23.0.4\AndroidManifest.xml:22:17-82
 	android:name
 		ADDED from [com.google.firebase:firebase-firestore:23.0.4] C:\Users\A\.gradle\caches\transforms-3\985bae2d4cc13dc6bdefafd8fef5f2c6\transformed\jetified-firebase-firestore-23.0.4\AndroidManifest.xml:21:17-111
+uses-feature#0x00020000
+ADDED from [com.google.android.gms:play-services-maps:17.0.1] C:\Users\A\.gradle\caches\transforms-3\2282cd92a21a4913fba18ca13e0438c2\transformed\jetified-play-services-maps-17.0.1\AndroidManifest.xml:26:5-28:35
+	android:glEsVersion
+		ADDED from [com.google.android.gms:play-services-maps:17.0.1] C:\Users\A\.gradle\caches\transforms-3\2282cd92a21a4913fba18ca13e0438c2\transformed\jetified-play-services-maps-17.0.1\AndroidManifest.xml:27:9-41
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:17.0.1] C:\Users\A\.gradle\caches\transforms-3\2282cd92a21a4913fba18ca13e0438c2\transformed\jetified-play-services-maps-17.0.1\AndroidManifest.xml:28:9-32
+queries
+ADDED from [com.google.android.gms:play-services-maps:17.0.1] C:\Users\A\.gradle\caches\transforms-3\2282cd92a21a4913fba18ca13e0438c2\transformed\jetified-play-services-maps-17.0.1\AndroidManifest.xml:30:5-34:15
+package#com.google.android.apps.maps
+ADDED from [com.google.android.gms:play-services-maps:17.0.1] C:\Users\A\.gradle\caches\transforms-3\2282cd92a21a4913fba18ca13e0438c2\transformed\jetified-play-services-maps-17.0.1\AndroidManifest.xml:33:9-64
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:17.0.1] C:\Users\A\.gradle\caches\transforms-3\2282cd92a21a4913fba18ca13e0438c2\transformed\jetified-play-services-maps-17.0.1\AndroidManifest.xml:33:18-61
+uses-library#org.apache.http.legacy
+ADDED from [com.google.android.gms:play-services-maps:17.0.1] C:\Users\A\.gradle\caches\transforms-3\2282cd92a21a4913fba18ca13e0438c2\transformed\jetified-play-services-maps-17.0.1\AndroidManifest.xml:39:9-41:40
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:17.0.1] C:\Users\A\.gradle\caches\transforms-3\2282cd92a21a4913fba18ca13e0438c2\transformed\jetified-play-services-maps-17.0.1\AndroidManifest.xml:41:13-37
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:17.0.1] C:\Users\A\.gradle\caches\transforms-3\2282cd92a21a4913fba18ca13e0438c2\transformed\jetified-play-services-maps-17.0.1\AndroidManifest.xml:40:13-50
 uses-permission#android.permission.WAKE_LOCK
 ADDED from [com.google.android.gms:play-services-measurement-api:19.0.2] C:\Users\A\.gradle\caches\transforms-3\e85fbdcec447e91f03600df3942bd942\transformed\jetified-play-services-measurement-api-19.0.2\AndroidManifest.xml:24:5-68
 MERGED from [com.google.android.gms:play-services-measurement:19.0.2] C:\Users\A\.gradle\caches\transforms-3\36bd6984d443a8765d23960fad5fe9de\transformed\jetified-play-services-measurement-19.0.2\AndroidManifest.xml:25:5-68

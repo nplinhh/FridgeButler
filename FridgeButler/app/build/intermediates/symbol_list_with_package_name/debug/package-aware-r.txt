@@ -117,6 +117,7 @@ attr allowStacking
 attr alpha
 attr alphabeticModifiers
 attr altSrc
+attr ambientEnabled
 attr animateCircleAngleTo
 attr animateRelativeTo
 attr animationMode
@@ -199,6 +200,13 @@ attr buttonStyle
 attr buttonStyleSmall
 attr buttonTint
 attr buttonTintMode
+attr cameraBearing
+attr cameraMaxZoomPreference
+attr cameraMinZoomPreference
+attr cameraTargetLat
+attr cameraTargetLng
+attr cameraTilt
+attr cameraZoom
 attr cardBackgroundColor
 attr cardCornerRadius
 attr cardElevation
@@ -363,6 +371,7 @@ attr daySelectedStyle
 attr dayStyle
 attr dayTodayStyle
 attr defaultDuration
+attr defaultNavHost
 attr defaultQueryHint
 attr defaultState
 attr deltaPolarAngle
@@ -565,6 +574,10 @@ attr labelBehavior
 attr labelStyle
 attr labelVisibilityMode
 attr lastBaselineToBottomHeight
+attr latLngBoundsNorthEastLatitude
+attr latLngBoundsNorthEastLongitude
+attr latLngBoundsSouthWestLatitude
+attr latLngBoundsSouthWestLongitude
 attr launchSingleTop
 attr layout
 attr layoutDescription
@@ -659,8 +672,10 @@ attr listPreferredItemPaddingEnd
 attr listPreferredItemPaddingLeft
 attr listPreferredItemPaddingRight
 attr listPreferredItemPaddingStart
+attr liteMode
 attr logo
 attr logoDescription
+attr mapType
 attr materialAlertDialogBodyTextStyle
 attr materialAlertDialogTheme
 attr materialAlertDialogTitleIconStyle
@@ -1053,10 +1068,19 @@ attr triggerId
 attr triggerReceiver
 attr triggerSlack
 attr ttcIndex
+attr uiCompass
+attr uiMapToolbar
+attr uiRotateGestures
+attr uiScrollGestures
+attr uiScrollGesturesDuringRotateOrZoom
+attr uiTiltGestures
+attr uiZoomControls
+attr uiZoomGestures
 attr upDuration
 attr uri
 attr useCompatPadding
 attr useMaterialThemeColors
+attr useViewLifecycle
 attr values
 attr verticalOffset
 attr viewInflaterClass
@@ -1086,6 +1110,7 @@ attr windowNoTitle
 attr yearSelectedStyle
 attr yearStyle
 attr yearTodayStyle
+attr zOrderOnTop
 bool abc_action_bar_embed_tabs
 bool abc_config_actionMenuItemAllCaps
 bool mtrl_btn_textappearance_all_caps
@@ -1405,6 +1430,8 @@ dimen abc_text_size_subtitle_material_toolbar
 dimen abc_text_size_title_material
 dimen abc_text_size_title_material_toolbar
 dimen action_bar_size
+dimen activity_horizontal_margin
+dimen activity_vertical_margin
 dimen appcompat_dialog_background_inset
 dimen browser_actions_context_menu_max_width
 dimen browser_actions_context_menu_min_padding
@@ -1470,6 +1497,7 @@ dimen design_tab_text_size_2line
 dimen design_textinput_caption_translate_y
 dimen disabled_alpha_material_dark
 dimen disabled_alpha_material_light
+dimen fab_margin
 dimen fastscroll_default_thickness
 dimen fastscroll_margin
 dimen fastscroll_minimum_range
@@ -1713,6 +1741,8 @@ dimen mtrl_tooltip_minHeight
 dimen mtrl_tooltip_minWidth
 dimen mtrl_tooltip_padding
 dimen mtrl_transition_shared_axis_slide_distance
+dimen nav_header_height
+dimen nav_header_vertical_spacing
 dimen notification_action_icon_size
 dimen notification_action_text_size
 dimen notification_big_circle_margin
@@ -1878,14 +1908,21 @@ drawable food
 drawable g
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable ic_baseline_account_circle_24
 drawable ic_baseline_add_24
+drawable ic_baseline_add_circle_outline_24
 drawable ic_baseline_email_24
 drawable ic_baseline_lock_24
+drawable ic_baseline_map_24
+drawable ic_baseline_settings_24
 drawable ic_clock_black_24dp
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_login_back
+drawable ic_menu_camera
+drawable ic_menu_gallery
+drawable ic_menu_slideshow
 drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
@@ -1931,6 +1968,7 @@ drawable question_mark_icon_143522
 drawable rounded_rectangle
 drawable shezhi
 drawable shiwu
+drawable side_nav_bar
 drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -2017,6 +2055,7 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id addItem
 id adjust_height
 id adjust_width
 id alertTitle
@@ -2056,6 +2095,8 @@ id browser_actions_menu_items
 id browser_actions_menu_view
 id btnDelete
 id btnUpdate
+id button
+id button2
 id buttonPanel
 id button_remove
 id cache_measures
@@ -2066,6 +2107,8 @@ id center_horizontal
 id center_vertical
 id chain
 id chains
+id changePass
+id changePhone
 id checkBox
 id checkbox
 id checked
@@ -2098,6 +2141,7 @@ id customPanel
 id cut
 id dark
 id date
+id datePicker1
 id date_picker_actions
 id decelerate
 id decelerateAndComplete
@@ -2132,6 +2176,7 @@ id easeIn
 id easeInOut
 id easeOut
 id east
+id editItem
 id edit_query
 id elastic
 id email
@@ -2173,6 +2218,7 @@ id home
 id homeAsUp
 id honorRequest
 id horizontal_only
+id hybrid
 id icon
 id icon_group
 id icon_only
@@ -2188,9 +2234,12 @@ id imageView4
 id immediateStop
 id included
 id info
+id ingredients
+id instruction
 id invisible
 id inward
 id italic
+id itemList
 id item_touch_helper_previous_elevation
 id jumpToEnd
 id jumpToStart
@@ -2203,11 +2252,13 @@ id light
 id line1
 id line3
 id linear
+id listItem
 id listMode
 id list_item
 id login
 id mEditedDate
 id mEditedDescription
+id map
 id masked
 id match_constraint
 id match_parent
@@ -2267,7 +2318,10 @@ id multiply
 id my_drawer_layout
 id nav_account
 id nav_controller_view_tag
+id nav_host_fragment_container
 id nav_logout
+id nav_map
+id nav_recipe
 id nav_settings
 id nav_view
 id navigation_bar_item_icon_view
@@ -2313,6 +2367,8 @@ id progress_circular
 id progress_horizontal
 id radio
 id ratio
+id recipeList
+id recipeTitle
 id recipe_name
 id rectangles
 id recyclerView
@@ -2324,6 +2380,7 @@ id right_icon
 id right_side
 id rounded
 id row_index_key
+id satellite
 id saveBtn
 id save_non_transition_alpha
 id save_overlay_view
@@ -2348,6 +2405,7 @@ id search_voice_btn
 id select_dialog_listview
 id selected
 id selection_type
+id setExpiraryDate
 id sharedValueSet
 id sharedValueUnset
 id shortcut
@@ -2385,6 +2443,7 @@ id stop
 id stretch
 id submenuarrow
 id submit_area
+id suggestion
 id supportScrollUp
 id tabMode
 id tag_accessibility_actions
@@ -2404,6 +2463,7 @@ id td_tab_friend
 id td_tab_setting
 id td_tab_txl
 id td_tab_weixin
+id terrain
 id test_checkbox_android_button_tint
 id test_checkbox_app_button_tint
 id test_radiobutton_android_button_tint
@@ -2538,15 +2598,23 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_edit_list
+layout activity_item_list
 layout activity_login
 layout activity_main
+layout activity_maps
+layout activity_recommend_recipe
 layout activity_register
+layout activity_selected_recipe
+layout activity_setting
 layout activity_show_profile
+layout adapter_listview
 layout add_food
 layout bottom
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
 layout custom_dialog
+layout custom_info_window
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar
@@ -2671,10 +2739,12 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string action_settings
 string app_name
 string appbar_scrolling_view_behavior
 string bottom_sheet_behavior
 string bottomsheet_action_expand_halfway
+string cancel
 string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern
@@ -2699,6 +2769,9 @@ string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
 string default_web_client_id
+string delete
+string dialog_delete_msg
+string dialog_delete_title
 string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
@@ -2707,6 +2780,7 @@ string gcm_defaultSenderId
 string google_api_key
 string google_app_id
 string google_crash_reporting_api_key
+string google_maps_key
 string google_storage_bucket
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
@@ -2769,7 +2843,12 @@ string mtrl_picker_toggle_to_year_selection
 string nav_app_bar_navigate_up_description
 string nav_app_bar_open_drawer_description
 string nav_close
+string nav_header_desc
+string nav_header_subtitle
+string nav_header_title
 string nav_open
+string navigation_drawer_close
+string navigation_drawer_open
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through
@@ -2778,6 +2857,8 @@ string path_password_strike_through
 string project_id
 string search_menu_title
 string status_bar_notification_info_overflow
+string title_activity_maps
+string title_activity_navigation_drawer
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style AndroidThemeColorAccentYellow
@@ -3009,6 +3090,7 @@ style Base_Widget_MaterialComponents_TextView
 style CardView
 style CardView_Dark
 style CardView_Light
+style Dexter_Internal_Theme_Transparent
 style EmptyTheme
 style MaterialAlertDialog_MaterialComponents
 style MaterialAlertDialog_MaterialComponents_Body_Text
@@ -3196,6 +3278,9 @@ style Theme_Design_Light_BottomSheetDialog
 style Theme_Design_Light_NoActionBar
 style Theme_Design_NoActionBar
 style Theme_FridgeButler
+style Theme_FridgeButler_AppBarOverlay
+style Theme_FridgeButler_NoActionBar
+style Theme_FridgeButler_PopupOverlay
 style Theme_MaterialComponents
 style Theme_MaterialComponents_BottomSheetDialog
 style Theme_MaterialComponents_Bridge
@@ -3545,6 +3630,7 @@ styleable ConstraintSet android_orientation android_id android_visibility androi
 styleable CoordinatorLayout keylines statusBarBackground
 styleable CoordinatorLayout_Layout android_layout_gravity layout_anchor layout_anchorGravity layout_behavior layout_dodgeInsetEdges layout_insetEdge layout_keyline
 styleable CustomAttribute attributeName customBoolean customColorDrawableValue customColorValue customDimension customFloatValue customIntegerValue customPixelDimension customReference customStringValue methodName
+styleable DialogFragmentNavigator android_name
 styleable DrawerArrowToggle arrowHeadLength arrowShaftLength barLength color drawableSize gapBetweenBars spinBars thickness
 styleable DrawerLayout elevation
 styleable ExtendedFloatingActionButton collapsedSize elevation extendMotionSpec hideMotionSpec showMotionSpec shrinkMotionSpec
@@ -3557,6 +3643,7 @@ styleable FontFamilyFont android_font android_fontWeight android_fontStyle andro
 styleable ForegroundLinearLayout android_foreground android_foregroundGravity foregroundInsidePadding
 styleable Fragment android_name android_id android_tag
 styleable FragmentContainerView android_name android_tag
+styleable FragmentNavigator android_name
 styleable GradientColor android_startColor android_endColor android_type android_centerX android_centerY android_gradientRadius android_tileMode android_centerColor android_startX android_startY android_endX android_endY
 styleable GradientColorItem android_color android_offset
 styleable ImageFilterView altSrc blendSrc brightness contrast crossfade imagePanX imagePanY imageRotate imageZoom overlay round roundPercent saturation warmth
@@ -3575,6 +3662,7 @@ styleable LinearLayoutCompat_Layout android_layout_gravity android_layout_width 
 styleable LinearProgressIndicator indeterminateAnimationType indicatorDirectionLinear
 styleable ListPopupWindow android_dropDownHorizontalOffset android_dropDownVerticalOffset
 styleable LoadingImageView circleCrop imageAspectRatio imageAspectRatioAdjust
+styleable MapAttrs ambientEnabled cameraBearing cameraMaxZoomPreference cameraMinZoomPreference cameraTargetLat cameraTargetLng cameraTilt cameraZoom latLngBoundsNorthEastLatitude latLngBoundsNorthEastLongitude latLngBoundsSouthWestLatitude latLngBoundsSouthWestLongitude liteMode mapType uiCompass uiMapToolbar uiRotateGestures uiScrollGestures uiScrollGesturesDuringRotateOrZoom uiTiltGestures uiZoomControls uiZoomGestures useViewLifecycle zOrderOnTop
 styleable MaterialAlertDialog backgroundInsetBottom backgroundInsetEnd backgroundInsetStart backgroundInsetTop
 styleable MaterialAlertDialogTheme materialAlertDialogBodyTextStyle materialAlertDialogTheme materialAlertDialogTitleIconStyle materialAlertDialogTitlePanelStyle materialAlertDialogTitleTextStyle
 styleable MaterialAutoCompleteTextView android_inputType
@@ -3606,6 +3694,7 @@ styleable NavArgument android_name android_defaultValue argType nullable
 styleable NavDeepLink android_autoVerify action mimeType uri
 styleable NavGraphNavigator startDestination
 styleable NavHost navGraph
+styleable NavHostFragment defaultNavHost
 styleable NavInclude graph
 styleable NavigationBarView backgroundTint elevation itemBackground itemIconSize itemIconTint itemRippleColor itemTextAppearanceActive itemTextAppearanceInactive itemTextColor labelVisibilityMode menu
 styleable NavigationRailView headerLayout menuGravity
