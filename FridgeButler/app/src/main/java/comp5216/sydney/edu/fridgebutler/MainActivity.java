@@ -219,6 +219,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         else if(id == R.id.nav_shopping){
             startActivity(new Intent(getApplicationContext(), ShoppingList.class));
         }
+        drawerLayout.closeDrawers();
         return true;
     }
 
