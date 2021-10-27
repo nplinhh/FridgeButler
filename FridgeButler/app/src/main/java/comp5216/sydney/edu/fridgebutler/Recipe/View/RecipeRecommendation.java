@@ -71,7 +71,7 @@ public class RecipeRecommendation extends AppCompatActivity {
         if (input.size() == 1) {
             dataInput = input.get(0);
         } else {
-            for (int i = 0; i < input.size() - 1; i++) {
+            for (int i = 0; i < input.size() ; i++) {
                 dataInput += input.get(i) + ",";
             }
             if (input.size() > 2) {

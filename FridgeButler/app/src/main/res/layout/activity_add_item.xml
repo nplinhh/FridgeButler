@@ -61,7 +61,7 @@
         android:id="@+id/suggestion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Don't know expirary date? Let us help you"
+        android:text="Don't know expiry date? Let us help you"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

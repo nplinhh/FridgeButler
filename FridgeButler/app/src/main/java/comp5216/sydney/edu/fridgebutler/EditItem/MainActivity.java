@@ -191,19 +191,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             startActivity(new Intent(getApplicationContext(), MapsActivity.class));
         } else if (id == R.id.nav_recommend) {
             Intent intent = new Intent(getApplicationContext(), RecipeRecommendation.class);
-            loadData(new DataCallBack() {
-                @Override
-                public void onComplete(ArrayList < Item > item) {
-                    ArrayList < String > ingredientList = new ArrayList < > ();
-                    for (int i = 0; i < itemList.size(); i++) {
-                        ingredientList.add(itemList.get(i).getName());
-                    }
-                    Log.d(TAG, "Check extras sent" + String.valueOf(ingredientList.size()));
-                    intent.putExtra("ingredientList", ingredientList);
-                    startActivity(intent);
-                }
-            });
-
+            ArrayList < String > ingredientList = new ArrayList < > ();
+            for (int i = 0; i < itemList.size(); i++) {
+                ingredientList.add(itemList.get(i).getName());
+            }
+            Log.d(TAG, "Check extras sent" + String.valueOf(ingredientList.size()));
+            intent.putExtra("ingredientList", ingredientList);
+            startActivity(intent);
         } else if (id == R.id.nav_offer) {
             startActivity(new Intent(getApplicationContext(), UpItem.class));
         } else if (id == R.id.nav_shopping) {

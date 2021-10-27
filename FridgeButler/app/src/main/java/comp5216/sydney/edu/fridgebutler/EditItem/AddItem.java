@@ -150,7 +150,7 @@ public class AddItem extends AppCompatActivity {
             public void onClick(View view) {
                 radioButton = category[0];
                 AlertDialog.Builder builder = new AlertDialog.Builder(AddItem.this);
-                builder.setTitle("Choice the category of your food");
+                builder.setTitle("Choose the category of your food");
                 builder.setSingleChoiceItems(category, 0, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
