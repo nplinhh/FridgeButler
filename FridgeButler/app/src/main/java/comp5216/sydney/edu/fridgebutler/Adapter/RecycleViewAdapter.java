@@ -4,31 +4,32 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
-import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import java.util.List;
-
 import comp5216.sydney.edu.fridgebutler.R;
 
-public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder> {
+/***************************************************************************************
+ *    Title:  Android Developers Guide
+ *    Author: n/A
+ *    Date:  2021-10-12
+ *    Code version: N/A
+ *    Availability: https://developer.android.com/guide/topics/ui/layout/recyclerview
+ *
+ ***************************************************************************************/
 
-    private List<String> localDataSet;
+/**
+ * Custom Adapter for recycle view in RecipeSelected class
+ *
+ */
+public class RecycleViewAdapter extends RecyclerView.Adapter < RecycleViewAdapter.ViewHolder > {
 
+    private List < String > recipeInfo;
 
-    /**
-     * Provide a reference to the type of views that you are using
-     * (custom ViewHolder).
-     */
-
-
-    public static class ViewHolder extends RecyclerView.ViewHolder  {
+    public static class ViewHolder extends RecyclerView.ViewHolder {
         private final TextView textView;
 
         public ViewHolder(View view) {
             super(view);
-            // Define click listener for the ViewHolder's View
             textView = (TextView) view.findViewById(R.id.textView);
         }
 
@@ -39,21 +40,21 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
     }
 
     /**
-     * Initialize the dataset of the Adapter.
+     * Initialize the information to the Adapter.
      *
-     * @param dataSet String[] containing the data to populate views to be used
+     * @param recipeInfo List<String> containing the data to populate views to be used
      * by RecyclerView.
      */
-    public CustomAdapter(List<String> dataSet) {
-        localDataSet = dataSet;
+    public RecycleViewAdapter(List < String > recipeInfo) {
+        this.recipeInfo = recipeInfo;
     }
 
     // Create new views (invoked by the layout manager)
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
+    public ViewHolder onCreateViewHolder(ViewGroup v, int viewType) {
         // Create a new view, which defines the UI of the list item
-        View view = LayoutInflater.from(viewGroup.getContext())
-                .inflate(R.layout.text_row_item, viewGroup, false);
+        View view = LayoutInflater.from(v.getContext())
+                .inflate(R.layout.text_row_item, v, false);
 
         return new ViewHolder(view);
     }
@@ -64,12 +65,12 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
 
         // Get element from your dataset at this position and replace the
         // contents of the view with that element
-        viewHolder.getTextView().setText(localDataSet.get(position));
+        viewHolder.getTextView().setText(recipeInfo.get(position));
     }
 
     // Return the size of your dataset (invoked by the layout manager)
     @Override
     public int getItemCount() {
-        return localDataSet.size();
+        return recipeInfo.size();
     }
 }

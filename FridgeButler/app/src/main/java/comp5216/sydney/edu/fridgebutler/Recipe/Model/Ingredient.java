@@ -1,13 +1,11 @@
 package comp5216.sydney.edu.fridgebutler.Recipe.Model;
 
-
-
-
 import java.io.Serializable;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
-
+/**
+ * Ingredient class to retrieve data from Spoonacular
+ * Attribute name has to be the same as the data in query
+ */
 public class Ingredient implements Serializable {
 
     private String name;
@@ -17,8 +15,7 @@ public class Ingredient implements Serializable {
     private String id;
     private String original;
 
-    public Ingredient() {
-    }
+    public Ingredient() {}
 
     public Ingredient(String IngredientName) {
         this.name = IngredientName;
@@ -56,12 +53,20 @@ public class Ingredient implements Serializable {
         this.unit = unit;
     }
 
-    public void setId(String id){this.id = id;}
+    public void setId(String id) {
+        this.id = id;
+    }
 
-    public String getId(){return id;};
+    public String getId() {
+        return id;
+    };
 
-    public void setOriginal(String original){this.original = original;}
+    public void setOriginal(String original) {
+        this.original = original;
+    }
 
-    public String getOriginal(){return this.original;}
+    public String getOriginal() {
+        return this.original;
+    }
 
 }

@@ -21,7 +21,7 @@
             android:name=".ShoppingList.ShoppingList"
             android:exported="true" />
         <activity
-            android:name=".EditItem"
+            android:name=".EditItem.EditItem"
             android:exported="true" />
         <activity
             android:name=".Map.UpItem"
@@ -49,22 +49,22 @@
             android:exported="true"
             android:label="@string/title_activity_maps" />
         <activity
-            android:name=".Register"
+            android:name=".Login.Register"
             android:exported="true" />
         <activity
-            android:name=".AddItem"
+            android:name=".EditItem.AddItem"
             android:exported="true" />
         <activity
-            android:name=".Setting"
+            android:name=".Login.Setting"
             android:exported="true" />
         <activity
-            android:name=".ShowProfile"
+            android:name=".Login.ShowProfile"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".EditItem.MainActivity"
             android:exported="true" />
         <activity
-            android:name=".Login"
+            android:name=".Login.Login"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

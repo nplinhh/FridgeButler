@@ -1,9 +1,8 @@
-package comp5216.sydney.edu.fridgebutler;
+package comp5216.sydney.edu.fridgebutler.Login;
 
 import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -15,12 +14,12 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
-import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.FirebaseFirestoreException;
+
+import comp5216.sydney.edu.fridgebutler.R;
 
 public class ShowProfile extends AppCompatActivity {
-    TextView name, phone, email;
+    TextView name, email;
     FirebaseAuth firebaseAuth;
     FirebaseFirestore db;
     String user_id;
@@ -34,7 +33,6 @@ public class ShowProfile extends AppCompatActivity {
         db = FirebaseFirestore.getInstance();
 
         name = findViewById(R.id.userName);
-        phone = findViewById(R.id.phone);
         email = findViewById(R.id.email);
 
         user_id = firebaseAuth.getCurrentUser().getUid();
@@ -47,7 +45,6 @@ public class ShowProfile extends AppCompatActivity {
                     if (document.exists()) {
                         Log.d(TAG, "DocumentSnapshot data: " + document.getData());
                         email.setText("Email: " + document.getString("Email"));
-                        phone.setText("Phone Number: " + document.getString("Phone"));
                         name.setText("Name: " +document.getString("FullName"));
                     } else {
                         Log.d(TAG, "No such document");
@@ -57,7 +54,6 @@ public class ShowProfile extends AppCompatActivity {
                 }
             }
         });
-
 
     }
 }

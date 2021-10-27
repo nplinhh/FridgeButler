@@ -1,4 +1,4 @@
-package comp5216.sydney.edu.fridgebutler;
+package comp5216.sydney.edu.fridgebutler.Login;
 
 
 import androidx.appcompat.app.AlertDialog;
@@ -12,6 +12,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
+
+import comp5216.sydney.edu.fridgebutler.EditItem.MainActivity;
+import comp5216.sydney.edu.fridgebutler.R;
 
 public class Login extends AppCompatActivity {
     EditText emailInput, passwordInput;

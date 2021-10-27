@@ -1,6 +1,4 @@
-package comp5216.sydney.edu.fridgebutler;
-
-import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
+package comp5216.sydney.edu.fridgebutler.Login;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -26,10 +24,13 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.HashMap;
 import java.util.Map;
 
+import comp5216.sydney.edu.fridgebutler.EditItem.MainActivity;
+import comp5216.sydney.edu.fridgebutler.R;
+
 
 public class Register extends AppCompatActivity {
     String TAG = this.getClass().getSimpleName();
-    EditText nameInput, passwordInput, emailInput, phoneInput, addressInput;
+    EditText nameInput, passwordInput, emailInput;
     Button registerButton;
     TextView logIn;
     FirebaseAuth firebaseAuth;
@@ -44,11 +45,8 @@ public class Register extends AppCompatActivity {
         nameInput = findViewById(R.id.Name);
         emailInput = findViewById(R.id.emailAddress);
         passwordInput = findViewById(R.id.Password);
-        phoneInput = findViewById(R.id.phoneNumber);
         registerButton = findViewById(R.id.Register);
         logIn = findViewById(R.id.login);
-        addressInput = findViewById(R.id.Address);
-
 
         firebaseAuth = FirebaseAuth.getInstance();
         db = FirebaseFirestore.getInstance();
@@ -56,10 +54,8 @@ public class Register extends AppCompatActivity {
 
     public void setRegisterButton(View view){
         String username = nameInput.getText().toString().trim();
-        String phone = phoneInput.getText().toString();
         String email = emailInput.getText().toString().trim();
         String password = passwordInput.getText().toString().trim();
-        String address = addressInput.getText().toString().trim();
 
         if(TextUtils.isEmpty(username)){
             nameInput.setError("Please enter your full name");
@@ -72,19 +68,10 @@ public class Register extends AppCompatActivity {
             passwordInput.setError("Please enter your password");
             return;
         }
-        if(TextUtils.isEmpty(phone)){
-            phoneInput.setError("Please enter your phone number");
-            return;
-        }
-        if(TextUtils.isEmpty(address)){
-            addressInput.setError("Please enter your address");
-            return;
-        }
         if(password.length() < 6){
             passwordInput.setError("Password must have at least 6 characters.");
             return;
         }
-
 
         firebaseAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
@@ -92,8 +79,6 @@ public class Register extends AppCompatActivity {
                 Map<String, Object> user = new HashMap<>();
                 user.put("FullName", username);
                 user.put("Email", email);
-                user.put("Phone", phone);
-                user.put("Address", address);
 
                 if(task.isSuccessful()){
                     Toast.makeText(Register.this, "User Created", Toast.LENGTH_SHORT).show();

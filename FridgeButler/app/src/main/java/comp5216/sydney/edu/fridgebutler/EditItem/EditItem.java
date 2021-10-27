@@ -1,4 +1,4 @@
-package comp5216.sydney.edu.fridgebutler;
+package comp5216.sydney.edu.fridgebutler.EditItem;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,6 +21,8 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 
+import comp5216.sydney.edu.fridgebutler.R;
+
 public class EditItem extends AppCompatActivity {
     DatePicker datepicker;
     EditText addItem;
@@ -31,7 +33,6 @@ public class EditItem extends AppCompatActivity {
     FirebaseAuth firebaseAuth;
     String remainingDays;
     String documentID;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,9 +47,8 @@ public class EditItem extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
         user_id = firebaseAuth.getCurrentUser().getUid();
 
-
         Bundle extras = getIntent().getExtras();
-        if (extras != null){
+        if (extras != null) {
             String name = extras.getString("itemName");
             String expiry = extras.getString("expiryDate");
             addItem.setText(name);
@@ -61,27 +61,28 @@ public class EditItem extends AppCompatActivity {
 
                 int day = datepicker.getDayOfMonth();
                 int month = datepicker.getMonth() + 1;
-                int year =  datepicker.getYear();
+                int year = datepicker.getYear();
                 String expiry = day + "/" + month + "/" + year;
 
                 //Change here
                 Calendar userDeadline = Calendar.getInstance();
-                userDeadline.set(year,month-1,day);
+                userDeadline.set(year, month - 1, day);
                 Long diff = userDeadline.getTimeInMillis() - System.currentTimeMillis();
-                int days = (int)(diff / 86400000); diff -= days * 86400000;
+                int days = (int)(diff / 86400000);
+                diff -= days * 86400000;
                 remainingDays = String.format("%d days left", days);
 
                 if (userDeadline.getTimeInMillis() - System.currentTimeMillis() <= 0) {
                     remainingDays = "OVERDUE";
                 }
 
-                Map<String, Object> itemsList = new HashMap<>();
+                Map < String, Object > itemsList = new HashMap < > ();
                 itemsList.put("expiryDate", expiry);
                 itemsList.put("Name", itemName);
                 DocumentReference df = db.collection("ingredients").document(user_id).collection("IngredientList").document(extras.getString("docRef"));
-                df.update(itemsList).addOnCompleteListener(new OnCompleteListener<Void>() {
+                df.update(itemsList).addOnCompleteListener(new OnCompleteListener < Void > () {
                     @Override
-                    public void onComplete(@NonNull Task<Void> task) {
+                    public void onComplete(@NonNull Task < Void > task) {
                         if (task.isSuccessful()) {
 
                             documentID = extras.getString("docRef");

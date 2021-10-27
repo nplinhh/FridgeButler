@@ -5,8 +5,6 @@ import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -27,18 +25,13 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Calendar;
 
-import comp5216.sydney.edu.fridgebutler.Adapter.CustomAdapter;
 import comp5216.sydney.edu.fridgebutler.Adapter.Item;
-import comp5216.sydney.edu.fridgebutler.MainActivity;
 import comp5216.sydney.edu.fridgebutler.Map.UpItem;
 import comp5216.sydney.edu.fridgebutler.R;
 
@@ -49,11 +42,9 @@ public class ShoppingList extends AppCompatActivity {
     String user_id;
 
     ListView shopping;
-    ArrayAdapter<String> adapter;
-    ArrayList<String> shoppingList;
-    ArrayList<Item> itemList;
-
-
+    ArrayAdapter < String > adapter;
+    ArrayList < String > shoppingList;
+    ArrayList < Item > itemList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,29 +55,27 @@ public class ShoppingList extends AppCompatActivity {
         db = FirebaseFirestore.getInstance();
         user_id = firebaseAuth.getCurrentUser().getUid();
 
-        shoppingList = new ArrayList<>();
-        itemList = new ArrayList<>();
+        shoppingList = new ArrayList < > ();
+        itemList = new ArrayList < > ();
 
-        adapter = new ArrayAdapter<String>(this, R.layout.shopping_list_item, R.id.textView, shoppingList);
+        adapter = new ArrayAdapter < String > (this, R.layout.shopping_list_item, R.id.textView, shoppingList);
         addCart = findViewById(R.id.addCart);
         shopping = findViewById(R.id.shop);
         shopping.setAdapter(adapter);
 
-
         CollectionReference collectionRef = db.collection("shopping").document(user_id).collection("IngredientList");
-        collectionRef.get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+        collectionRef.get().addOnCompleteListener(new OnCompleteListener < QuerySnapshot > () {
             @Override
-            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+            public void onComplete(@NonNull Task < QuerySnapshot > task) {
                 if (task.isSuccessful()) {
-                    for (QueryDocumentSnapshot document : task.getResult()) {
+                    for (QueryDocumentSnapshot document: task.getResult()) {
                         Log.d("TAG", "check item in shopping list " + document.get("item").toString());
                         itemList.add(new Item(document.get("item").toString(), document.getId()));
                         shoppingList.add(document.get("item").toString());
                         adapter.notifyDataSetChanged();
                     }
                     onClickListerner();
-                }
-                else {
+                } else {
                     Log.d(TAG, "Error getting documents: ", task.getException());
                 }
             }
@@ -94,21 +83,20 @@ public class ShoppingList extends AppCompatActivity {
 
     }
 
-    public void onClickListerner(){
+    public void onClickListerner() {
         shopping.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
-            public boolean onItemLongClick(AdapterView<?> adapterView, View view, int position, long rowID) {
+            public boolean onItemLongClick(AdapterView < ? > adapterView, View view, int position, long rowID) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(ShoppingList.this);
                 builder.setTitle("Do you want to delete this item?")
                         .setPositiveButton(R.string.cancel, new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialogInterface, int i) {
-                            }
+                            public void onClick(DialogInterface dialogInterface, int i) {}
                         })
                         .setNegativeButton(R.string.delete, new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 String docRef = itemList.get(position).getDocRef();
-                                DocumentReference docToDelete =  db.collection("shopping").document(user_id).collection("IngredientList").document(docRef);
-                                docToDelete.delete().addOnSuccessListener(new OnSuccessListener<Void>() {
+                                DocumentReference docToDelete = db.collection("shopping").document(user_id).collection("IngredientList").document(docRef);
+                                docToDelete.delete().addOnSuccessListener(new OnSuccessListener < Void > () {
                                     @Override
                                     public void onSuccess(Void unused) {
                                         Log.d(TAG, "DocumentSnapshot successfully deleted!");
@@ -134,7 +122,7 @@ public class ShoppingList extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(ShoppingList.this);
-                builder.setTitle("Do you want to upload your shopping list" )
+                builder.setTitle("Do you want to upload your shopping list")
                         .setMessage("If you need your grocery delivered, others can contact to help you")
                         .setPositiveButton("Cancel", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialogInterface, int i) {
@@ -154,7 +142,6 @@ public class ShoppingList extends AppCompatActivity {
                 builder.create().show();
             }
         });
-
 
     }
 }

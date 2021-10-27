@@ -9,39 +9,41 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import java.util.ArrayList;
 
-
 import comp5216.sydney.edu.fridgebutler.R;
 
-public class ItemAdapter extends ArrayAdapter < Item >  {
-    ArrayList<Item> listItem;
-    public ItemAdapter(@NonNull Context context, ArrayList<Item> arrayList) {
+/**
+ * Custom adapter for List View on Main Activity
+ * to show the users' items and theirs expiry date
+ */
+
+public class ItemAdapter extends ArrayAdapter < Item > {
+    ArrayList < Item > listItem;
+
+    //Constructor
+    public ItemAdapter(@NonNull Context context, ArrayList < Item > arrayList) {
         super(context, 0, arrayList);
         listItem = arrayList;
     }
 
+    //Populating item data to its own view
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 
-        View currentItemView = convertView;
+        View itemView = convertView;
 
-        if (currentItemView == null) {
-            currentItemView = LayoutInflater.from(getContext()).inflate(R.layout.adapter_listview, parent, false);
+        if (itemView == null) {
+            itemView = LayoutInflater.from(getContext()).inflate(R.layout.adapter_listview, parent, false);
         }
-        Item currentPosition = getItem(position);
+        Item currentItem = getItem(position);
 
-        TextView textView1 = currentItemView.findViewById(R.id.textView1);
-        textView1.setText(currentPosition.getName());
+        TextView itemName = itemView.findViewById(R.id.itemName);
+        itemName.setText(currentItem.getName());
 
-        TextView textView2 = currentItemView.findViewById(R.id.textView2);
-        textView2.setText(currentPosition.getExpiryDate());
+        TextView expiry = itemView.findViewById(R.id.expiryDate);
+        expiry.setText(currentItem.getExpiryDate());
 
-        return currentItemView;
+        return itemView;
     }
-
-    public ArrayList<Item> getListItem(){
-        return listItem;
-    }
-
 
 }
